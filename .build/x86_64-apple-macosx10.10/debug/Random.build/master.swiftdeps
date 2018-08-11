@@ -1,0 +1,8 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "80ac734146da44bb2ec856446c2e668f"
+build_time: [1533998146, 783559000]
+inputs:
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Random/Array+Random.swift": [1533998104, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Random/OSRandom.swift": [1533998104, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Random/RandomProtocol.swift": [1533998104, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Random/URandom.swift": [1533998104, 0]

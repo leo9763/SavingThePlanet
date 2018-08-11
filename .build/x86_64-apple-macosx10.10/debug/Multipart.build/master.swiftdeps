@@ -1,0 +1,12 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "217ffc1361b6f751a16fdcee46f0e1e5"
+build_time: [1533998154, 799160000]
+inputs:
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/multipart.git-4210556629793786970/Sources/Multipart/Exports.swift": [1533998107, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/multipart.git-4210556629793786970/Sources/Multipart/FormDataDecoder.swift": [1533998107, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/multipart.git-4210556629793786970/Sources/Multipart/FormDataEncoder.swift": [1533998107, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/multipart.git-4210556629793786970/Sources/Multipart/MultipartError.swift": [1533998107, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/multipart.git-4210556629793786970/Sources/Multipart/MultipartParser.swift": [1533998107, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/multipart.git-4210556629793786970/Sources/Multipart/MultipartPart.swift": [1533998107, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/multipart.git-4210556629793786970/Sources/Multipart/MultipartPartConvertible.swift": [1533998107, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/multipart.git-4210556629793786970/Sources/Multipart/MultipartSerializer.swift": [1533998107, 0]

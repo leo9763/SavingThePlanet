@@ -1,0 +1,20 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "f5b37d4dcbb26676ba5386285e9b2083"
+build_time: [1533998176, 713527000]
+inputs:
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Base/CommandOption.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Base/CommandRunnable.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Command/Command.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Command/CommandArgument.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Config/CommandConfig.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Config/Commands.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Group/BasicCommandGroup.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Group/CommandGroup.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Run/CommandContext.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Run/CommandInput.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Run/Console+Run.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Run/Output+Autocomplete.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Run/Output+Help.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Utilities/CommandError.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Utilities/Exports.swift": [1533998103, 0]
+  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/console.git--2431895819212044213/Sources/Command/Utilities/Utilities.swift": [1533998103, 0]
