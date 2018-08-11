@@ -1,6 +1,0 @@
-version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
-options: "78ed51103dbbb7d763b4c1f94e8b8fae"
-build_time: [1533998129, 648684000]
-inputs:
-  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOPriorityQueue/Heap.swift": [1533998105, 0]
-  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOPriorityQueue/PriorityQueue.swift": [1533998105, 0]
