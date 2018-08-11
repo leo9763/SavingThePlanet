@@ -1,1 +1,2 @@
 swift_version: "4.1.0"
+verifyCertificates: false
