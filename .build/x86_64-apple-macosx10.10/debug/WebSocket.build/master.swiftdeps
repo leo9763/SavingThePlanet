@@ -1,0 +1,9 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "f9102b232ca5f2baa9536ed960fd30e4"
+build_time: [1534507288, 314363000]
+inputs:
+  "/Users/nero/SavingThePlanet/.build/checkouts/websocket.git-995660844808513665/Sources/WebSocket/Exports.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/websocket.git-995660844808513665/Sources/WebSocket/WebSocket+Client.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/websocket.git-995660844808513665/Sources/WebSocket/WebSocket+Server.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/websocket.git-995660844808513665/Sources/WebSocket/WebSocket.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/websocket.git-995660844808513665/Sources/WebSocket/WebSocketHandler.swift": [1534506378, 0]

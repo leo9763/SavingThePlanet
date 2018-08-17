@@ -1,0 +1,918 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Regproc"
+provides-nominal:
+- "10PostgreSQL7RegprocO"
+provides-member:
+- ["3NIO10ByteBufferV", ""]
+- ["10PostgreSQL7RegprocO", ""]
+- ["10Foundation4DataV", ""]
+- ["s19BinaryFloatingPointP", ""]
+- ["s17FixedWidthIntegerP", ""]
+- ["3NIO10ByteBufferV", "write"]
+- ["3NIO10ByteBufferV", "readEnum"]
+- ["3NIO10ByteBufferV", "readNullableData"]
+- ["3NIO10ByteBufferV", "write"]
+- ["3NIO10ByteBufferV", "readArray"]
+- ["3NIO10ByteBufferV", "write"]
+- ["3NIO10ByteBufferV", "write"]
+- ["10Foundation4DataV", "of"]
+- ["10Foundation4DataV", "as"]
+- ["s19BinaryFloatingPointP", "bitWidth"]
+- ["s19BinaryFloatingPointP", "data"]
+- ["s17FixedWidthIntegerP", "cast"]
+- ["10Foundation4DataV", "skip"]
+- ["10Foundation4DataV", "skip"]
+- ["10Foundation4DataV", "extract"]
+- ["10Foundation4DataV", "extract"]
+- ["10Foundation4DataV", "unsafeCast"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "+"
+- !private "..<"
+- !private "<"
+- !private "<="
+- !private ">="
+- "AssignmentPrecedence"
+- "BinaryFloatingPoint"
+- !private "Byte"
+- "ByteBuffer"
+- "CastingPrecedence"
+- "Codable"
+- "Data"
+- "Decoder"
+- "Encoder"
+- "FixedWidthInteger"
+- !private "FloatLiteralType"
+- "Int"
+- !private "Int16"
+- !private "Int32"
+- !private "IntegerLiteralType"
+- !private "MemoryLayout"
+- "PostgreSQLData"
+- "PostgreSQLDataConvertible"
+- "RawRepresentable"
+- "Regproc"
+- "String"
+- !private "StringLiteralType"
+- !private "Swift"
+- "UInt32"
+- !private "UnsafePointer"
+- !private "UnsafeRawBufferPointer"
+- !private "Void"
+- !private "assert"
+- !private "numericCast"
+- !private "~="
+depends-member:
+- !private ["10PostgreSQL8AnyArrayP", "append"]
+- !private ["10PostgreSQL8AnyArrayP", "count"]
+- !private ["10PostgreSQL8AnyArrayP", "reserveCapacity"]
+- !private ["4Core15AnyOptionalTypeP", "flatMap"]
+- !private ["4Core22AnyReflectionDecodableP", "Data"]
+- !private ["4Core22AnyReflectionDecodableP", "MemoryLayout"]
+- !private ["4Core22AnyReflectionDecodableP", "Swift"]
+- !private ["4Core22AnyReflectionDecodableP", "UnsafeRawBufferPointer"]
+- !private ["4Core22AnyReflectionDecodableP", "_getBuiltinLogicValue"]
+- !private ["4Core22AnyReflectionDecodableP", "advanced"]
+- !private ["4Core22AnyReflectionDecodableP", "append"]
+- !private ["4Core22AnyReflectionDecodableP", "assert"]
+- !private ["4Core22AnyReflectionDecodableP", "convertFromPostgreSQLData"]
+- !private ["4Core22AnyReflectionDecodableP", "convertToPostgreSQLData"]
+- !private ["4Core22AnyReflectionDecodableP", "count"]
+- !private ["4Core22AnyReflectionDecodableP", "flatMap"]
+- !private ["4Core22AnyReflectionDecodableP", "init"]
+- !private ["4Core22AnyReflectionDecodableP", "prefix"]
+- !private ["4Core22AnyReflectionDecodableP", "reserveCapacity"]
+- !private ["4Core22AnyReflectionDecodableP", "skip"]
+- !private ["4Core22AnyReflectionDecodableP", "unsafeCast"]
+- !private ["4Core22AnyReflectionDecodableP", "withUnsafeBytes"]
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "reserveCapacity"]
+- !private ["21NIOConcurrencyHelpers15AtomicPrimitiveP", "_getBuiltinLogicValue"]
+- !private ["21NIOConcurrencyHelpers15AtomicPrimitiveP", "convertFromPostgreSQLData"]
+- !private ["21NIOConcurrencyHelpers15AtomicPrimitiveP", "convertToPostgreSQLData"]
+- !private ["4Core21BasicKeyRepresentableP", "convertFromPostgreSQLData"]
+- !private ["4Core21BasicKeyRepresentableP", "convertToPostgreSQLData"]
+- !private ["4Core21BasicKeyRepresentableP", "init"]
+- !private ["s23BidirectionalCollectionP", "Data"]
+- !private ["s23BidirectionalCollectionP", "MemoryLayout"]
+- !private ["s23BidirectionalCollectionP", "Swift"]
+- !private ["s23BidirectionalCollectionP", "UnsafeRawBufferPointer"]
+- !private ["s23BidirectionalCollectionP", "advanced"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "assert"]
+- !private ["s23BidirectionalCollectionP", "baseAddress"]
+- !private ["s23BidirectionalCollectionP", "convertFromPostgreSQLData"]
+- !private ["s23BidirectionalCollectionP", "convertToPostgreSQLData"]
+- !private ["s23BidirectionalCollectionP", "copyMemory"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "prefix"]
+- !private ["s23BidirectionalCollectionP", "reserveCapacity"]
+- !private ["s23BidirectionalCollectionP", "skip"]
+- !private ["s23BidirectionalCollectionP", "unsafeCast"]
+- !private ["s23BidirectionalCollectionP", "withUnsafeBytes"]
+- ["s19BinaryFloatingPointP", "Data"]
+- ["s19BinaryFloatingPointP", "Int"]
+- !private ["s19BinaryFloatingPointP", "MemoryLayout"]
+- !private ["s19BinaryFloatingPointP", "Self"]
+- ["s19BinaryFloatingPointP", "bitWidth"]
+- ["s19BinaryFloatingPointP", "data"]
+- !private ["s19BinaryFloatingPointP", "exponentBitCount"]
+- !private ["s19BinaryFloatingPointP", "significandBitCount"]
+- ["s13BinaryIntegerP", "FixedWidthInteger"]
+- !private ["s13BinaryIntegerP", "convertFromPostgreSQLData"]
+- !private ["s13BinaryIntegerP", "convertToPostgreSQLData"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["s13BinaryIntegerP", "max"]
+- !private ["s13BinaryIntegerP", "min"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["3NIO10ByteBufferV", "Byte"]
+- ["3NIO10ByteBufferV", "ByteBuffer"]
+- ["3NIO10ByteBufferV", "Data"]
+- ["3NIO10ByteBufferV", "FixedWidthInteger"]
+- !private ["3NIO10ByteBufferV", "Int"]
+- !private ["3NIO10ByteBufferV", "Int16"]
+- !private ["3NIO10ByteBufferV", "Int32"]
+- ["3NIO10ByteBufferV", "RawRepresentable"]
+- ["3NIO10ByteBufferV", "String"]
+- !private ["3NIO10ByteBufferV", "numericCast"]
+- ["3NIO10ByteBufferV", "readArray"]
+- !private ["3NIO10ByteBufferV", "readData"]
+- ["3NIO10ByteBufferV", "readEnum"]
+- !private ["3NIO10ByteBufferV", "readInteger"]
+- ["3NIO10ByteBufferV", "readNullableData"]
+- ["3NIO10ByteBufferV", "write"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "convertFromPostgreSQLData"]
+- !private ["s7CVarArgP", "convertToPostgreSQLData"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "pointee"]
+- !private ["s7CVarArgP", "reserveCapacity"]
+- !private ["s10CollectionP", "Data"]
+- !private ["s10CollectionP", "MemoryLayout"]
+- !private ["s10CollectionP", "Swift"]
+- !private ["s10CollectionP", "UnsafeRawBufferPointer"]
+- !private ["s10CollectionP", "advanced"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "assert"]
+- !private ["s10CollectionP", "baseAddress"]
+- !private ["s10CollectionP", "convertFromPostgreSQLData"]
+- !private ["s10CollectionP", "convertToPostgreSQLData"]
+- !private ["s10CollectionP", "copyMemory"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "prefix"]
+- !private ["s10CollectionP", "reserveCapacity"]
+- !private ["s10CollectionP", "skip"]
+- !private ["s10CollectionP", "unsafeCast"]
+- !private ["s10CollectionP", "withUnsafeBytes"]
+- ["s10ComparableP", "Data"]
+- ["s10ComparableP", "FixedWidthInteger"]
+- ["s10ComparableP", "Int"]
+- !private ["s10ComparableP", "MemoryLayout"]
+- !private ["s10ComparableP", "Self"]
+- !private ["s10ComparableP", "convertFromPostgreSQLData"]
+- !private ["s10ComparableP", "convertToPostgreSQLData"]
+- !private ["s10ComparableP", "exponentBitCount"]
+- !private ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "max"]
+- !private ["s10ComparableP", "min"]
+- !private ["s10ComparableP", "pointee"]
+- !private ["s10ComparableP", "significandBitCount"]
+- !private ["3NIO20ContiguousCollectionP", "Data"]
+- !private ["3NIO20ContiguousCollectionP", "MemoryLayout"]
+- !private ["3NIO20ContiguousCollectionP", "Swift"]
+- !private ["3NIO20ContiguousCollectionP", "UnsafeRawBufferPointer"]
+- !private ["3NIO20ContiguousCollectionP", "advanced"]
+- !private ["3NIO20ContiguousCollectionP", "append"]
+- !private ["3NIO20ContiguousCollectionP", "assert"]
+- !private ["3NIO20ContiguousCollectionP", "baseAddress"]
+- !private ["3NIO20ContiguousCollectionP", "count"]
+- !private ["3NIO20ContiguousCollectionP", "init"]
+- !private ["3NIO20ContiguousCollectionP", "prefix"]
+- !private ["3NIO20ContiguousCollectionP", "reserveCapacity"]
+- !private ["3NIO20ContiguousCollectionP", "skip"]
+- !private ["3NIO20ContiguousCollectionP", "unsafeCast"]
+- !private ["3NIO20ContiguousCollectionP", "withUnsafeBytes"]
+- !private ["s28CustomDebugStringConvertibleP", "Data"]
+- !private ["s28CustomDebugStringConvertibleP", "MemoryLayout"]
+- !private ["s28CustomDebugStringConvertibleP", "Swift"]
+- !private ["s28CustomDebugStringConvertibleP", "UnsafeRawBufferPointer"]
+- !private ["s28CustomDebugStringConvertibleP", "advanced"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "assert"]
+- !private ["s28CustomDebugStringConvertibleP", "baseAddress"]
+- !private ["s28CustomDebugStringConvertibleP", "convertFromPostgreSQLData"]
+- !private ["s28CustomDebugStringConvertibleP", "convertToPostgreSQLData"]
+- !private ["s28CustomDebugStringConvertibleP", "copyMemory"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "flatMap"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "pointee"]
+- !private ["s28CustomDebugStringConvertibleP", "prefix"]
+- !private ["s28CustomDebugStringConvertibleP", "reserveCapacity"]
+- !private ["s28CustomDebugStringConvertibleP", "skip"]
+- !private ["s28CustomDebugStringConvertibleP", "unsafeCast"]
+- !private ["s28CustomDebugStringConvertibleP", "withUnsafeBytes"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "convertFromPostgreSQLData"]
+- !private ["s29CustomPlaygroundQuickLookableP", "convertToPostgreSQLData"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "pointee"]
+- !private ["s17CustomReflectableP", "Data"]
+- !private ["s17CustomReflectableP", "MemoryLayout"]
+- !private ["s17CustomReflectableP", "Swift"]
+- !private ["s17CustomReflectableP", "UnsafeRawBufferPointer"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "advanced"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "assert"]
+- !private ["s17CustomReflectableP", "convertFromPostgreSQLData"]
+- !private ["s17CustomReflectableP", "convertToPostgreSQLData"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "flatMap"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "pointee"]
+- !private ["s17CustomReflectableP", "prefix"]
+- !private ["s17CustomReflectableP", "reserveCapacity"]
+- !private ["s17CustomReflectableP", "skip"]
+- !private ["s17CustomReflectableP", "unsafeCast"]
+- !private ["s17CustomReflectableP", "withUnsafeBytes"]
+- !private ["s23CustomStringConvertibleP", "Byte"]
+- !private ["s23CustomStringConvertibleP", "Data"]
+- ["s23CustomStringConvertibleP", "FixedWidthInteger"]
+- !private ["s23CustomStringConvertibleP", "Int16"]
+- !private ["s23CustomStringConvertibleP", "Int32"]
+- !private ["s23CustomStringConvertibleP", "MemoryLayout"]
+- !private ["s23CustomStringConvertibleP", "Swift"]
+- !private ["s23CustomStringConvertibleP", "UnsafeRawBufferPointer"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "advanced"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "assert"]
+- !private ["s23CustomStringConvertibleP", "binary"]
+- !private ["s23CustomStringConvertibleP", "convertFromPostgreSQLData"]
+- !private ["s23CustomStringConvertibleP", "convertToPostgreSQLData"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "max"]
+- !private ["s23CustomStringConvertibleP", "min"]
+- !private ["s23CustomStringConvertibleP", "numericCast"]
+- !private ["s23CustomStringConvertibleP", "prefix"]
+- !private ["s23CustomStringConvertibleP", "readData"]
+- !private ["s23CustomStringConvertibleP", "readInteger"]
+- !private ["s23CustomStringConvertibleP", "reserveCapacity"]
+- !private ["s23CustomStringConvertibleP", "skip"]
+- !private ["s23CustomStringConvertibleP", "unsafeCast"]
+- !private ["s23CustomStringConvertibleP", "withUnsafeBytes"]
+- !private ["s23CustomStringConvertibleP", "write"]
+- ["10Foundation4DataV", "Data"]
+- ["10Foundation4DataV", "Int"]
+- !private ["10Foundation4DataV", "MemoryLayout"]
+- !private ["10Foundation4DataV", "Swift"]
+- !private ["10Foundation4DataV", "UnsafePointer"]
+- !private ["10Foundation4DataV", "UnsafeRawBufferPointer"]
+- !private ["10Foundation4DataV", "Void"]
+- !private ["10Foundation4DataV", "advanced"]
+- ["10Foundation4DataV", "as"]
+- !private ["10Foundation4DataV", "assert"]
+- !private ["10Foundation4DataV", "count"]
+- ["10Foundation4DataV", "extract"]
+- !private ["10Foundation4DataV", "init"]
+- ["10Foundation4DataV", "of"]
+- !private ["10Foundation4DataV", "prefix"]
+- ["10Foundation4DataV", "skip"]
+- ["10Foundation4DataV", "unsafeCast"]
+- !private ["10Foundation4DataV", "withUnsafeBytes"]
+- !private ["s9DecodableP", "Data"]
+- !private ["s9DecodableP", "MemoryLayout"]
+- !private ["s9DecodableP", "String"]
+- !private ["s9DecodableP", "Swift"]
+- !private ["s9DecodableP", "UnsafeRawBufferPointer"]
+- ["s9DecodableP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "advanced"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "assert"]
+- ["s9DecodableP", "convertFromPostgreSQLData"]
+- ["s9DecodableP", "convertToPostgreSQLData"]
+- !private ["s9DecodableP", "count"]
+- ["s9DecodableP", "encode"]
+- !private ["s9DecodableP", "flatMap"]
+- ["s9DecodableP", "function"]
+- ["s9DecodableP", "functionID"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "prefix"]
+- !private ["s9DecodableP", "reserveCapacity"]
+- !private ["s9DecodableP", "skip"]
+- !private ["s9DecodableP", "unsafeCast"]
+- !private ["s9DecodableP", "withUnsafeBytes"]
+- !private ["s7DecoderP", "singleValueContainer"]
+- !private ["s9EncodableP", "Data"]
+- !private ["s9EncodableP", "MemoryLayout"]
+- !private ["s9EncodableP", "String"]
+- !private ["s9EncodableP", "Swift"]
+- !private ["s9EncodableP", "UnsafeRawBufferPointer"]
+- ["s9EncodableP", ""]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "advanced"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "assert"]
+- ["s9EncodableP", "convertFromPostgreSQLData"]
+- ["s9EncodableP", "convertToPostgreSQLData"]
+- !private ["s9EncodableP", "count"]
+- ["s9EncodableP", "encode"]
+- !private ["s9EncodableP", "flatMap"]
+- ["s9EncodableP", "function"]
+- ["s9EncodableP", "functionID"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "prefix"]
+- !private ["s9EncodableP", "reserveCapacity"]
+- !private ["s9EncodableP", "skip"]
+- !private ["s9EncodableP", "unsafeCast"]
+- !private ["s9EncodableP", "withUnsafeBytes"]
+- !private ["s7EncoderP", "singleValueContainer"]
+- !private ["s9EquatableP", "Byte"]
+- ["s9EquatableP", "Data"]
+- ["s9EquatableP", "FixedWidthInteger"]
+- ["s9EquatableP", "Int"]
+- !private ["s9EquatableP", "Int16"]
+- !private ["s9EquatableP", "Int32"]
+- !private ["s9EquatableP", "MemoryLayout"]
+- !private ["s9EquatableP", "Self"]
+- !private ["s9EquatableP", "Swift"]
+- !private ["s9EquatableP", "UnsafeRawBufferPointer"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "advanced"]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "assert"]
+- !private ["s9EquatableP", "binary"]
+- !private ["s9EquatableP", "convertFromPostgreSQLData"]
+- !private ["s9EquatableP", "convertToPostgreSQLData"]
+- !private ["s9EquatableP", "count"]
+- !private ["s9EquatableP", "exponentBitCount"]
+- !private ["s9EquatableP", "flatMap"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "min"]
+- !private ["s9EquatableP", "numericCast"]
+- !private ["s9EquatableP", "pointee"]
+- !private ["s9EquatableP", "prefix"]
+- !private ["s9EquatableP", "readData"]
+- !private ["s9EquatableP", "readInteger"]
+- !private ["s9EquatableP", "reserveCapacity"]
+- !private ["s9EquatableP", "significandBitCount"]
+- !private ["s9EquatableP", "skip"]
+- !private ["s9EquatableP", "unsafeCast"]
+- !private ["s9EquatableP", "withUnsafeBytes"]
+- !private ["s9EquatableP", "write"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "reserveCapacity"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "convertFromPostgreSQLData"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "convertToPostgreSQLData"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s25ExpressibleByFloatLiteralP", "Data"]
+- ["s25ExpressibleByFloatLiteralP", "Int"]
+- !private ["s25ExpressibleByFloatLiteralP", "MemoryLayout"]
+- !private ["s25ExpressibleByFloatLiteralP", "Self"]
+- !private ["s25ExpressibleByFloatLiteralP", "exponentBitCount"]
+- !private ["s25ExpressibleByFloatLiteralP", "significandBitCount"]
+- ["s27ExpressibleByIntegerLiteralP", "Data"]
+- ["s27ExpressibleByIntegerLiteralP", "FixedWidthInteger"]
+- ["s27ExpressibleByIntegerLiteralP", "Int"]
+- !private ["s27ExpressibleByIntegerLiteralP", "MemoryLayout"]
+- !private ["s27ExpressibleByIntegerLiteralP", "Self"]
+- !private ["s27ExpressibleByIntegerLiteralP", "convertFromPostgreSQLData"]
+- !private ["s27ExpressibleByIntegerLiteralP", "convertToPostgreSQLData"]
+- !private ["s27ExpressibleByIntegerLiteralP", "exponentBitCount"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "max"]
+- !private ["s27ExpressibleByIntegerLiteralP", "min"]
+- !private ["s27ExpressibleByIntegerLiteralP", "significandBitCount"]
+- !private ["s23ExpressibleByNilLiteralP", "flatMap"]
+- !private ["s26ExpressibleByStringLiteralP", "convertFromPostgreSQLData"]
+- !private ["s26ExpressibleByStringLiteralP", "convertToPostgreSQLData"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "convertFromPostgreSQLData"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "convertToPostgreSQLData"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s17FixedWidthIntegerP", "FixedWidthInteger"]
+- ["s17FixedWidthIntegerP", "cast"]
+- !private ["s17FixedWidthIntegerP", "convertFromPostgreSQLData"]
+- !private ["s17FixedWidthIntegerP", "convertToPostgreSQLData"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s17FixedWidthIntegerP", "max"]
+- !private ["s17FixedWidthIntegerP", "min"]
+- ["s13FloatingPointP", "Data"]
+- ["s13FloatingPointP", "Int"]
+- !private ["s13FloatingPointP", "MemoryLayout"]
+- !private ["s13FloatingPointP", "Self"]
+- !private ["s13FloatingPointP", "exponentBitCount"]
+- !private ["s13FloatingPointP", "significandBitCount"]
+- ["s8HashableP", "Data"]
+- ["s8HashableP", "FixedWidthInteger"]
+- ["s8HashableP", "Int"]
+- !private ["s8HashableP", "MemoryLayout"]
+- !private ["s8HashableP", "Self"]
+- !private ["s8HashableP", "Swift"]
+- !private ["s8HashableP", "UnsafeRawBufferPointer"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "advanced"]
+- !private ["s8HashableP", "assert"]
+- !private ["s8HashableP", "convertFromPostgreSQLData"]
+- !private ["s8HashableP", "convertToPostgreSQLData"]
+- !private ["s8HashableP", "count"]
+- !private ["s8HashableP", "exponentBitCount"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "max"]
+- !private ["s8HashableP", "min"]
+- !private ["s8HashableP", "pointee"]
+- !private ["s8HashableP", "prefix"]
+- !private ["s8HashableP", "significandBitCount"]
+- !private ["s8HashableP", "skip"]
+- !private ["s8HashableP", "unsafeCast"]
+- !private ["s8HashableP", "withUnsafeBytes"]
+- !private ["4Core23LosslessDataConvertibleP", "Data"]
+- !private ["4Core23LosslessDataConvertibleP", "MemoryLayout"]
+- !private ["4Core23LosslessDataConvertibleP", "Swift"]
+- !private ["4Core23LosslessDataConvertibleP", "UnsafeRawBufferPointer"]
+- !private ["4Core23LosslessDataConvertibleP", "advanced"]
+- !private ["4Core23LosslessDataConvertibleP", "append"]
+- !private ["4Core23LosslessDataConvertibleP", "assert"]
+- !private ["4Core23LosslessDataConvertibleP", "convertFromPostgreSQLData"]
+- !private ["4Core23LosslessDataConvertibleP", "convertToPostgreSQLData"]
+- !private ["4Core23LosslessDataConvertibleP", "count"]
+- !private ["4Core23LosslessDataConvertibleP", "init"]
+- !private ["4Core23LosslessDataConvertibleP", "prefix"]
+- !private ["4Core23LosslessDataConvertibleP", "reserveCapacity"]
+- !private ["4Core23LosslessDataConvertibleP", "skip"]
+- !private ["4Core23LosslessDataConvertibleP", "unsafeCast"]
+- !private ["4Core23LosslessDataConvertibleP", "withUnsafeBytes"]
+- ["s25LosslessStringConvertibleP", "FixedWidthInteger"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "convertFromPostgreSQLData"]
+- !private ["s25LosslessStringConvertibleP", "convertToPostgreSQLData"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "max"]
+- !private ["s25LosslessStringConvertibleP", "min"]
+- !private ["s12MemoryLayoutO", "size"]
+- !private ["s10MirrorPathP", "convertFromPostgreSQLData"]
+- !private ["s10MirrorPathP", "convertToPostgreSQLData"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "Data"]
+- !private ["s17MutableCollectionP", "MemoryLayout"]
+- !private ["s17MutableCollectionP", "Swift"]
+- !private ["s17MutableCollectionP", "UnsafeRawBufferPointer"]
+- !private ["s17MutableCollectionP", "advanced"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "assert"]
+- !private ["s17MutableCollectionP", "copyMemory"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "prefix"]
+- !private ["s17MutableCollectionP", "reserveCapacity"]
+- !private ["s17MutableCollectionP", "skip"]
+- !private ["s17MutableCollectionP", "unsafeCast"]
+- !private ["s17MutableCollectionP", "withUnsafeBytes"]
+- !private ["So8NSCodingP", "convertToPostgreSQLData"]
+- !private ["So9NSCopyingP", "convertToPostgreSQLData"]
+- !private ["So21NSItemProviderReadingP", "convertToPostgreSQLData"]
+- !private ["So21NSItemProviderWritingP", "convertToPostgreSQLData"]
+- !private ["So16NSMutableCopyingP", "convertToPostgreSQLData"]
+- !private ["So8NSObjectC", "convertToPostgreSQLData"]
+- !private ["So16NSObjectProtocolP", "convertToPostgreSQLData"]
+- !private ["So14NSSecureCodingP", "convertToPostgreSQLData"]
+- !private ["So8NSStringC", "convertToPostgreSQLData"]
+- ["s7NumericP", "Data"]
+- ["s7NumericP", "FixedWidthInteger"]
+- ["s7NumericP", "Int"]
+- !private ["s7NumericP", "MemoryLayout"]
+- !private ["s7NumericP", "Self"]
+- !private ["s7NumericP", "convertFromPostgreSQLData"]
+- !private ["s7NumericP", "convertToPostgreSQLData"]
+- !private ["s7NumericP", "exponentBitCount"]
+- !private ["s7NumericP", "init"]
+- !private ["s7NumericP", "max"]
+- !private ["s7NumericP", "min"]
+- !private ["s7NumericP", "significandBitCount"]
+- !private ["Sq", "flatMap"]
+- !private ["4Core12OptionalTypeP", "flatMap"]
+- !private ["10PostgreSQL0A7SQLDataV", "binary"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "Data"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "MemoryLayout"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "String"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "Swift"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "UnsafeRawBufferPointer"]
+- ["10PostgreSQL0A18SQLDataConvertibleP", ""]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "_getBuiltinLogicValue"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "advanced"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "assert"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "binary"]
+- ["10PostgreSQL0A18SQLDataConvertibleP", "convertFromPostgreSQLData"]
+- ["10PostgreSQL0A18SQLDataConvertibleP", "convertToPostgreSQLData"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "count"]
+- ["10PostgreSQL0A18SQLDataConvertibleP", "encode"]
+- ["10PostgreSQL0A18SQLDataConvertibleP", "function"]
+- ["10PostgreSQL0A18SQLDataConvertibleP", "functionID"]
+- ["10PostgreSQL0A18SQLDataConvertibleP", "init"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "prefix"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "skip"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "unsafeCast"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "withUnsafeBytes"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "Data"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "MemoryLayout"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "Swift"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "UnsafeRawBufferPointer"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "_getBuiltinLogicValue"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "advanced"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "assert"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "convertFromPostgreSQLData"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "convertToPostgreSQLData"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "count"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "init"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "prefix"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "skip"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "unsafeCast"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "withUnsafeBytes"]
+- !private ["s22RandomAccessCollectionP", "Data"]
+- !private ["s22RandomAccessCollectionP", "MemoryLayout"]
+- !private ["s22RandomAccessCollectionP", "Swift"]
+- !private ["s22RandomAccessCollectionP", "UnsafeRawBufferPointer"]
+- !private ["s22RandomAccessCollectionP", "advanced"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "assert"]
+- !private ["s22RandomAccessCollectionP", "baseAddress"]
+- !private ["s22RandomAccessCollectionP", "copyMemory"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "prefix"]
+- !private ["s22RandomAccessCollectionP", "reserveCapacity"]
+- !private ["s22RandomAccessCollectionP", "skip"]
+- !private ["s22RandomAccessCollectionP", "unsafeCast"]
+- !private ["s22RandomAccessCollectionP", "withUnsafeBytes"]
+- !private ["s26RangeReplaceableCollectionP", "Data"]
+- !private ["s26RangeReplaceableCollectionP", "MemoryLayout"]
+- !private ["s26RangeReplaceableCollectionP", "Swift"]
+- !private ["s26RangeReplaceableCollectionP", "UnsafeRawBufferPointer"]
+- !private ["s26RangeReplaceableCollectionP", "advanced"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "assert"]
+- !private ["s26RangeReplaceableCollectionP", "convertFromPostgreSQLData"]
+- !private ["s26RangeReplaceableCollectionP", "convertToPostgreSQLData"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "prefix"]
+- !private ["s26RangeReplaceableCollectionP", "reserveCapacity"]
+- !private ["s26RangeReplaceableCollectionP", "skip"]
+- !private ["s26RangeReplaceableCollectionP", "unsafeCast"]
+- !private ["s26RangeReplaceableCollectionP", "withUnsafeBytes"]
+- !private ["s16RawRepresentableP", "RawValue"]
+- !private ["s16RawRepresentableP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "Data"]
+- !private ["10Foundation20ReferenceConvertibleP", "MemoryLayout"]
+- !private ["10Foundation20ReferenceConvertibleP", "Swift"]
+- !private ["10Foundation20ReferenceConvertibleP", "UnsafeRawBufferPointer"]
+- !private ["10Foundation20ReferenceConvertibleP", "advanced"]
+- !private ["10Foundation20ReferenceConvertibleP", "assert"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "prefix"]
+- !private ["10Foundation20ReferenceConvertibleP", "skip"]
+- !private ["10Foundation20ReferenceConvertibleP", "unsafeCast"]
+- !private ["10Foundation20ReferenceConvertibleP", "withUnsafeBytes"]
+- !private ["4Core19ReflectionDecodableP", "Data"]
+- !private ["4Core19ReflectionDecodableP", "MemoryLayout"]
+- !private ["4Core19ReflectionDecodableP", "Swift"]
+- !private ["4Core19ReflectionDecodableP", "UnsafeRawBufferPointer"]
+- !private ["4Core19ReflectionDecodableP", "_getBuiltinLogicValue"]
+- !private ["4Core19ReflectionDecodableP", "advanced"]
+- !private ["4Core19ReflectionDecodableP", "append"]
+- !private ["4Core19ReflectionDecodableP", "assert"]
+- !private ["4Core19ReflectionDecodableP", "convertFromPostgreSQLData"]
+- !private ["4Core19ReflectionDecodableP", "convertToPostgreSQLData"]
+- !private ["4Core19ReflectionDecodableP", "count"]
+- !private ["4Core19ReflectionDecodableP", "flatMap"]
+- !private ["4Core19ReflectionDecodableP", "init"]
+- !private ["4Core19ReflectionDecodableP", "prefix"]
+- !private ["4Core19ReflectionDecodableP", "reserveCapacity"]
+- !private ["4Core19ReflectionDecodableP", "skip"]
+- !private ["4Core19ReflectionDecodableP", "unsafeCast"]
+- !private ["4Core19ReflectionDecodableP", "withUnsafeBytes"]
+- ["10PostgreSQL7RegprocO", "Decoder"]
+- ["10PostgreSQL7RegprocO", "Encoder"]
+- ["10PostgreSQL7RegprocO", "PostgreSQLData"]
+- ["10PostgreSQL7RegprocO", "Regproc"]
+- ["10PostgreSQL7RegprocO", "String"]
+- ["10PostgreSQL7RegprocO", "UInt32"]
+- ["10PostgreSQL7RegprocO", "convertFromPostgreSQLData"]
+- ["10PostgreSQL7RegprocO", "convertToPostgreSQLData"]
+- ["10PostgreSQL7RegprocO", "deinit"]
+- ["10PostgreSQL7RegprocO", "encode"]
+- ["10PostgreSQL7RegprocO", "function"]
+- ["10PostgreSQL7RegprocO", "functionID"]
+- ["10PostgreSQL7RegprocO", "init"]
+- !private ["s8SequenceP", "Data"]
+- !private ["s8SequenceP", "MemoryLayout"]
+- !private ["s8SequenceP", "Swift"]
+- !private ["s8SequenceP", "UnsafeRawBufferPointer"]
+- !private ["s8SequenceP", "advanced"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "assert"]
+- !private ["s8SequenceP", "baseAddress"]
+- !private ["s8SequenceP", "convertFromPostgreSQLData"]
+- !private ["s8SequenceP", "convertToPostgreSQLData"]
+- !private ["s8SequenceP", "copyMemory"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "prefix"]
+- !private ["s8SequenceP", "reserveCapacity"]
+- !private ["s8SequenceP", "skip"]
+- !private ["s8SequenceP", "unsafeCast"]
+- !private ["s8SequenceP", "withUnsafeBytes"]
+- ["s13SignedNumericP", "Data"]
+- ["s13SignedNumericP", "Int"]
+- !private ["s13SignedNumericP", "MemoryLayout"]
+- !private ["s13SignedNumericP", "Self"]
+- !private ["s13SignedNumericP", "exponentBitCount"]
+- !private ["s13SignedNumericP", "significandBitCount"]
+- !private ["s28SingleValueDecodingContainerP", "decode"]
+- !private ["s28SingleValueEncodingContainerP", "encode"]
+- !private ["s12StaticStringV", "init"]
+- ["s10StrideableP", "Data"]
+- ["s10StrideableP", "FixedWidthInteger"]
+- ["s10StrideableP", "Int"]
+- !private ["s10StrideableP", "MemoryLayout"]
+- !private ["s10StrideableP", "Self"]
+- !private ["s10StrideableP", "convertFromPostgreSQLData"]
+- !private ["s10StrideableP", "convertToPostgreSQLData"]
+- !private ["s10StrideableP", "exponentBitCount"]
+- !private ["s10StrideableP", "init"]
+- !private ["s10StrideableP", "max"]
+- !private ["s10StrideableP", "min"]
+- !private ["s10StrideableP", "pointee"]
+- !private ["s10StrideableP", "significandBitCount"]
+- !private ["SS", "convertFromPostgreSQLData"]
+- !private ["SS", "convertToPostgreSQLData"]
+- !private ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "convertFromPostgreSQLData"]
+- !private ["s14StringProtocolP", "convertToPostgreSQLData"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "convertFromPostgreSQLData"]
+- !private ["s16TextOutputStreamP", "convertToPostgreSQLData"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "convertFromPostgreSQLData"]
+- !private ["s20TextOutputStreamableP", "convertToPostgreSQLData"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s6UInt32V", "convertFromPostgreSQLData"]
+- !private ["s6UInt32V", "convertToPostgreSQLData"]
+- !private ["s6UInt32V", "deinit"]
+- !private ["s29UnsafeMutableRawBufferPointerV", "copyMemory"]
+- !private ["SP", "pointee"]
+- !private ["s22UnsafeRawBufferPointerV", "baseAddress"]
+- !private ["s22UnsafeRawBufferPointerV", "init"]
+- !private ["s15UnsignedIntegerP", "convertFromPostgreSQLData"]
+- !private ["s15UnsignedIntegerP", "convertToPostgreSQLData"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "reserveCapacity"]
+- ["s18_BitwiseOperationsP", "FixedWidthInteger"]
+- !private ["s18_BitwiseOperationsP", "convertFromPostgreSQLData"]
+- !private ["s18_BitwiseOperationsP", "convertToPostgreSQLData"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s18_BitwiseOperationsP", "max"]
+- !private ["s18_BitwiseOperationsP", "min"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "reserveCapacity"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "convertFromPostgreSQLData"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "convertToPostgreSQLData"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "convertFromPostgreSQLData"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "convertToPostgreSQLData"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "convertFromPostgreSQLData"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "convertToPostgreSQLData"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "convertFromPostgreSQLData"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "convertToPostgreSQLData"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "convertFromPostgreSQLData"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "convertToPostgreSQLData"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "convertFromPostgreSQLData"]
+- !private ["s33_ExpressibleByStringInterpolationP", "convertToPostgreSQLData"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "convertToPostgreSQLData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "convertToPostgreSQLData"]
+- !private ["s21_ObjectiveCBridgeableP", "Data"]
+- !private ["s21_ObjectiveCBridgeableP", "MemoryLayout"]
+- !private ["s21_ObjectiveCBridgeableP", "Swift"]
+- !private ["s21_ObjectiveCBridgeableP", "UnsafeRawBufferPointer"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "advanced"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "assert"]
+- !private ["s21_ObjectiveCBridgeableP", "convertFromPostgreSQLData"]
+- !private ["s21_ObjectiveCBridgeableP", "convertToPostgreSQLData"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "flatMap"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "prefix"]
+- !private ["s21_ObjectiveCBridgeableP", "reserveCapacity"]
+- !private ["s21_ObjectiveCBridgeableP", "skip"]
+- !private ["s21_ObjectiveCBridgeableP", "unsafeCast"]
+- !private ["s21_ObjectiveCBridgeableP", "withUnsafeBytes"]
+- !private ["s8_PointerP", "pointee"]
+- !private ["s16_SwiftStringViewP", "convertFromPostgreSQLData"]
+- !private ["s16_SwiftStringViewP", "convertToPostgreSQLData"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "10PostgreSQL8AnyArrayP"
+- !private "4Core15AnyOptionalTypeP"
+- !private "4Core22AnyReflectionDecodableP"
+- !private "Sa"
+- !private "21NIOConcurrencyHelpers15AtomicPrimitiveP"
+- !private "4Core21BasicKeyRepresentableP"
+- !private "s23BidirectionalCollectionP"
+- "s19BinaryFloatingPointP"
+- "s13BinaryIntegerP"
+- !private "Sb"
+- "3NIO10ByteBufferV"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- "s10ComparableP"
+- !private "3NIO20ContiguousCollectionP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation4DataV"
+- "s9DecodableP"
+- !private "s7DecoderP"
+- "s9EncodableP"
+- !private "s7EncoderP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s17FixedWidthIntegerP"
+- "s13FloatingPointP"
+- "s8HashableP"
+- !private "4Core23LosslessDataConvertibleP"
+- "s25LosslessStringConvertibleP"
+- !private "s12MemoryLayoutO"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "s7NumericP"
+- !private "Sq"
+- !private "4Core12OptionalTypeP"
+- !private "10PostgreSQL0A7SQLDataV"
+- "10PostgreSQL0A18SQLDataConvertibleP"
+- !private "10PostgreSQL0A30SQLDataTypeStaticRepresentableP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "4Core19ReflectionDecodableP"
+- "10PostgreSQL7RegprocO"
+- !private "s8SequenceP"
+- "s13SignedNumericP"
+- !private "s28SingleValueDecodingContainerP"
+- !private "s28SingleValueEncodingContainerP"
+- !private "s12StaticStringV"
+- "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s6UInt32V"
+- !private "s29UnsafeMutableRawBufferPointerV"
+- !private "SP"
+- !private "s22UnsafeRawBufferPointerV"
+- !private "s15UnsignedIntegerP"
+- !private "s14_ArrayProtocolP"
+- "s18_BitwiseOperationsP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s8_PointerP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/SQL.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOOpenSSL.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIO.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOTLS.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Async.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Service.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Core.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Debugging.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/COperatingSystem.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Random.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Crypto.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOConcurrencyHelpers.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Bits.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOFoundationCompat.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/DatabaseKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/asn1.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/tls1.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/dtls1.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pkcs12.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl2.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pem2.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl23.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl3.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/x509v3.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/md5.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pkcs7.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/x509.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/sha.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/dsa.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ecdsa.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/rsa.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/obj_mac.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/hmac.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ec.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIOAtomics/include/cpp_magic.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/rand.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/conf.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/opensslconf.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/dh.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ecdh.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/lhash.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/stack.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/safestack.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/CNIOOpenSSL/include/c_nio_openssl.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pem.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/bn.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIODarwin/include/c_nio_darwin.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/bio.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/crypto.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/srtp.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/evp.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ossl_typ.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/buffer.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/err.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIOAtomics/include/c-atomics.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/opensslfeatures.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/objects.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/opensslv.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIOLinux/include/c_nio_linux.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/x509_vfy.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl-support.git--2359138821295600615/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-zlib-support.git--1071467962839356487/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOSHA1.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOOpenSSL.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOZlib.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIODarwin.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOHTTPParser.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOAtomics.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOLinux.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/libbcrypt/include/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "bb54cb6f102c4b94a011f478a33310ff"

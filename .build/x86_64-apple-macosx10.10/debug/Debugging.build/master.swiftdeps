@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "95581b0f327a48a6527e438c928ae87c"
+build_time: [1534506399, 246417000]
+inputs:
+  "/Users/nero/SavingThePlanet/.build/checkouts/core.git-9210800844849382486/Sources/Debugging/Debuggable.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/core.git-9210800844849382486/Sources/Debugging/Demangler.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/core.git-9210800844849382486/Sources/Debugging/SourceLocation.swift": [1534506378, 0]

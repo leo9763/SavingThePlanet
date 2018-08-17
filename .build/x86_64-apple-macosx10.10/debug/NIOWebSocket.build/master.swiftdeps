@@ -1,0 +1,13 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "5ce94be74068ea1c0cd8b436111c6cfe"
+build_time: [1534507261, 470956000]
+inputs:
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOWebSocket/Base64.swift": [1534507222, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOWebSocket/SHA1.swift": [1534507222, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOWebSocket/WebSocketErrorCodes.swift": [1534507222, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOWebSocket/WebSocketFrame.swift": [1534507222, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOWebSocket/WebSocketFrameDecoder.swift": [1534507222, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOWebSocket/WebSocketFrameEncoder.swift": [1534507222, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOWebSocket/WebSocketOpcode.swift": [1534507222, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOWebSocket/WebSocketProtocolErrorHandler.swift": [9223372036, 854775807]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOWebSocket/WebSocketUpgrader.swift": [1534507222, 0]

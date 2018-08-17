@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "75461e00fc3ea8e97a2e8ce81ce8c827"
+build_time: [1534515899, 211540000]
+inputs:
+  "/Users/nero/SavingThePlanet/Sources/Run/main.swift": [1534424324, 0]

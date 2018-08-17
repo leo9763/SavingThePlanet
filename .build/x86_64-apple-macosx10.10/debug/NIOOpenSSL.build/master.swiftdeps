@@ -1,0 +1,17 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "b5725c7a30094eddaa53278570c36841"
+build_time: [1534507257, 791172000]
+inputs:
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/IdentityVerification.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/OpenSSLClientHandler.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/OpenSSLHandler.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/OpenSSLServerHandler.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/PosixPort.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/SSLCertificate.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/SSLConnection.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/SSLContext.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/SSLErrors.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/SSLInit.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/SSLPKCS12Bundle.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/SSLPrivateKey.swift": [1534506380, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/NIOOpenSSL/TLSConfiguration.swift": [1534506380, 0]

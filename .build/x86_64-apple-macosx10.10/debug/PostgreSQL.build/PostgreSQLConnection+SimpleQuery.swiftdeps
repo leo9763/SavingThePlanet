@@ -1,0 +1,295 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["10PostgreSQL0A13SQLConnectionC", ""]
+- ["10PostgreSQL0A13SQLConnectionC", "simpleQuery"]
+- ["10PostgreSQL0A13SQLConnectionC", "simpleQuery"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "Array"
+- !private "AssignmentPrecedence"
+- "Future"
+- "PostgreSQLColumn"
+- "PostgreSQLConnection"
+- "PostgreSQLData"
+- !private "PostgreSQLError"
+- !private "PostgreSQLMessage"
+- "String"
+- "StringLiteralType"
+- "Void"
+depends-member:
+- !private ["10PostgreSQL8AnyArrayP", "map"]
+- !private ["4Core22AnyReflectionDecodableP", "init"]
+- !private ["4Core22AnyReflectionDecodableP", "map"]
+- !private ["Sa", "map"]
+- !private ["4Core21BasicKeyRepresentableP", "init"]
+- !private ["5Async11BasicWorkerP", "PostgreSQLError"]
+- !private ["5Async11BasicWorkerP", "_simpleQuery"]
+- !private ["5Async11BasicWorkerP", "logger"]
+- !private ["5Async11BasicWorkerP", "operation"]
+- !private ["5Async11BasicWorkerP", "send"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "map"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "map"]
+- !private ["s10ComparableP", "init"]
+- !private ["3NIO20ContiguousCollectionP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["11DatabaseKit0A11ConnectableP", "PostgreSQLError"]
+- !private ["11DatabaseKit0A11ConnectableP", "_simpleQuery"]
+- !private ["11DatabaseKit0A11ConnectableP", "logger"]
+- !private ["11DatabaseKit0A11ConnectableP", "operation"]
+- !private ["11DatabaseKit0A11ConnectableP", "send"]
+- !private ["11DatabaseKit0A10ConnectionP", "PostgreSQLError"]
+- !private ["11DatabaseKit0A10ConnectionP", "_simpleQuery"]
+- !private ["11DatabaseKit0A10ConnectionP", "logger"]
+- !private ["11DatabaseKit0A10ConnectionP", "operation"]
+- !private ["11DatabaseKit0A10ConnectionP", "send"]
+- !private ["11DatabaseKit0A6LoggerC", "record"]
+- !private ["11DatabaseKit0A9QueryableP", "PostgreSQLError"]
+- !private ["11DatabaseKit0A9QueryableP", "_simpleQuery"]
+- !private ["11DatabaseKit0A9QueryableP", "logger"]
+- !private ["11DatabaseKit0A9QueryableP", "operation"]
+- !private ["11DatabaseKit0A9QueryableP", "send"]
+- !private ["9Debugging10DebuggableP", "init"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "map"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "map"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "map"]
+- !private ["s5ErrorP", "init"]
+- !private ["3NIO14EventLoopGroupP", "PostgreSQLError"]
+- !private ["3NIO14EventLoopGroupP", "_simpleQuery"]
+- !private ["3NIO14EventLoopGroupP", "logger"]
+- !private ["3NIO14EventLoopGroupP", "operation"]
+- !private ["3NIO14EventLoopGroupP", "send"]
+- !private ["s25ExpressibleByArrayLiteralP", "map"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["7Service10ExtendableP", "PostgreSQLError"]
+- !private ["7Service10ExtendableP", "_simpleQuery"]
+- !private ["7Service10ExtendableP", "logger"]
+- !private ["7Service10ExtendableP", "operation"]
+- !private ["7Service10ExtendableP", "send"]
+- !private ["10PostgreSQL0A10SQLMessageO14RowDescriptionV5FieldV", "formatCode"]
+- !private ["s8HashableP", "init"]
+- !private ["10Foundation14LocalizedErrorP", "init"]
+- !private ["4Core23LosslessDataConvertibleP", "init"]
+- !private ["4Core23LosslessDataConvertibleP", "map"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "map"]
+- ["10PostgreSQL0A9SQLColumnV", "deinit"]
+- ["10PostgreSQL0A13SQLConnectionC", "Future"]
+- ["10PostgreSQL0A13SQLConnectionC", "PostgreSQLColumn"]
+- ["10PostgreSQL0A13SQLConnectionC", "PostgreSQLData"]
+- !private ["10PostgreSQL0A13SQLConnectionC", "PostgreSQLError"]
+- !private ["10PostgreSQL0A13SQLConnectionC", "PostgreSQLMessage"]
+- ["10PostgreSQL0A13SQLConnectionC", "String"]
+- ["10PostgreSQL0A13SQLConnectionC", "Void"]
+- !private ["10PostgreSQL0A13SQLConnectionC", "_simpleQuery"]
+- !private ["10PostgreSQL0A13SQLConnectionC", "logger"]
+- !private ["10PostgreSQL0A13SQLConnectionC", "operation"]
+- !private ["10PostgreSQL0A13SQLConnectionC", "send"]
+- ["10PostgreSQL0A13SQLConnectionC", "simpleQuery"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "init"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "init"]
+- !private ["10PostgreSQL0A8SQLErrorV", "deinit"]
+- !private ["10PostgreSQL0A8SQLErrorV", "init"]
+- !private ["10PostgreSQL0A10SQLMessageO", "RowDescription"]
+- !private ["10PostgreSQL0A10SQLMessageO", "close"]
+- !private ["10PostgreSQL0A10SQLMessageO", "dataRow"]
+- !private ["10PostgreSQL0A10SQLMessageO", "query"]
+- !private ["10PostgreSQL0A10SQLMessageO", "rowDescription"]
+- !private ["10PostgreSQL0A10SQLMessageO5QueryV", "init"]
+- !private ["s22RandomAccessCollectionP", "map"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "map"]
+- !private ["4Core19ReflectionDecodableP", "init"]
+- !private ["4Core19ReflectionDecodableP", "map"]
+- !private ["10PostgreSQL0A10SQLMessageO14RowDescriptionV", "fields"]
+- !private ["10PostgreSQL0A10SQLMessageO14RowDescriptionV", "parse"]
+- !private ["3SQL13SQLConnectionP", "PostgreSQLError"]
+- !private ["3SQL13SQLConnectionP", "_simpleQuery"]
+- !private ["3SQL13SQLConnectionP", "logger"]
+- !private ["3SQL13SQLConnectionP", "operation"]
+- !private ["3SQL13SQLConnectionP", "send"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "map"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "map"]
+- !private ["s24_DestructorSafeContainerP", "map"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "10PostgreSQL8AnyArrayP"
+- !private "4Core22AnyReflectionDecodableP"
+- !private "Sa"
+- !private "4Core21BasicKeyRepresentableP"
+- !private "5Async11BasicWorkerP"
+- !private "s23BidirectionalCollectionP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "3NIO20ContiguousCollectionP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "11DatabaseKit0A11ConnectableP"
+- !private "11DatabaseKit0A10ConnectionP"
+- !private "11DatabaseKit0A6LoggerC"
+- !private "11DatabaseKit0A9QueryableP"
+- !private "9Debugging10DebuggableP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s5ErrorP"
+- !private "3NIO14EventLoopGroupP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "7Service10ExtendableP"
+- !private "10PostgreSQL0A10SQLMessageO14RowDescriptionV5FieldV"
+- !private "s8HashableP"
+- !private "10Foundation14LocalizedErrorP"
+- !private "4Core23LosslessDataConvertibleP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- "10PostgreSQL0A9SQLColumnV"
+- "10PostgreSQL0A13SQLConnectionC"
+- !private "10PostgreSQL0A18SQLDataConvertibleP"
+- !private "10PostgreSQL0A30SQLDataTypeStaticRepresentableP"
+- !private "10PostgreSQL0A8SQLErrorV"
+- !private "10PostgreSQL0A10SQLMessageO"
+- !private "10PostgreSQL0A10SQLMessageO5QueryV"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "4Core19ReflectionDecodableP"
+- !private "10PostgreSQL0A10SQLMessageO14RowDescriptionV"
+- !private "3SQL13SQLConnectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/SQL.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOOpenSSL.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIO.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOTLS.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Async.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Service.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Core.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Debugging.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/COperatingSystem.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Random.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Crypto.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOConcurrencyHelpers.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Bits.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOFoundationCompat.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/DatabaseKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/asn1.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/tls1.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/dtls1.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pkcs12.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl2.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pem2.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl23.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl3.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/x509v3.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/md5.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pkcs7.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/x509.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/sha.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/dsa.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ecdsa.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/rsa.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/obj_mac.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/hmac.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ec.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIOAtomics/include/cpp_magic.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/rand.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/conf.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/opensslconf.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/dh.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ecdh.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/lhash.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/stack.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/safestack.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/CNIOOpenSSL/include/c_nio_openssl.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pem.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/bn.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIODarwin/include/c_nio_darwin.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/bio.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/crypto.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/srtp.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/evp.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ossl_typ.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/buffer.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/err.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIOAtomics/include/c-atomics.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/opensslfeatures.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/objects.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/opensslv.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIOLinux/include/c_nio_linux.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/x509_vfy.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl-support.git--2359138821295600615/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-zlib-support.git--1071467962839356487/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOSHA1.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOOpenSSL.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOZlib.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIODarwin.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOHTTPParser.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOAtomics.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOLinux.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/libbcrypt/include/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "6406b37bd0aaaa983678cb81e8e32c43"

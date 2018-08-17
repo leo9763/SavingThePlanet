@@ -1,0 +1,16 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "79e739ce190bf88548183c6f41f2d3d4"
+build_time: [1534516888, 555742000]
+inputs:
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/Exports.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/FluentSQLiteError.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/FluentSQLiteProvider.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/FluentSQLiteQuery.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/FluentSQLiteSchema.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/SQLiteDatabase+JoinSupporting.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/SQLiteDatabase+MigrationSupporting.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/SQLiteDatabase+QuerySupporting.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/SQLiteDatabase+SchemaSupporting.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/SQLiteDatabase+TransactionSupporting.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/SQLiteModels.swift": [1534516813, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/fluent-sqlite.git--5503918280859119093/Sources/FluentSQLite/SQLiteTypes.swift": [1534516813, 0]

@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/COperatingSystem.build/master.swiftdeps"
+  },
+  "/Users/nero/SavingThePlanet/.build/checkouts/core.git-9210800844849382486/Sources/COperatingSystem/libc.swift": {
+    "dependencies": "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/COperatingSystem.build/libc.d",
+    "object": "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/COperatingSystem.build/libc.swift.o",
+    "swiftmodule": "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/COperatingSystem.build/libc~partial.swiftmodule",
+    "swift-dependencies": "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/COperatingSystem.build/libc.swiftdeps"
+  }
+}

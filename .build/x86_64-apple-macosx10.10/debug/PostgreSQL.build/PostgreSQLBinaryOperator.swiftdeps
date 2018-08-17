@@ -1,0 +1,452 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PostgreSQLBinaryOperator"
+provides-nominal:
+- "10PostgreSQL0A17SQLBinaryOperatorO"
+provides-member:
+- ["10PostgreSQL0A17SQLBinaryOperatorO", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- "Encodable"
+- "Equatable"
+- "PostgreSQLBinaryOperator"
+- "SQLBinaryOperator"
+- "String"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+depends-member:
+- !private ["4Core22AnyReflectionDecodableP", "init"]
+- !private ["4Core21BasicKeyRepresentableP", "init"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_add"]
+- ["s9EquatableP", "_and"]
+- ["s9EquatableP", "_bitwiseAnd"]
+- ["s9EquatableP", "_bitwiseOr"]
+- ["s9EquatableP", "_bitwiseShiftLeft"]
+- ["s9EquatableP", "_bitwiseShiftRight"]
+- ["s9EquatableP", "_concatenate"]
+- ["s9EquatableP", "_divide"]
+- ["s9EquatableP", "_equal"]
+- ["s9EquatableP", "_glob"]
+- ["s9EquatableP", "_greaterThan"]
+- ["s9EquatableP", "_greaterThanOrEqual"]
+- ["s9EquatableP", "_in"]
+- ["s9EquatableP", "_is"]
+- ["s9EquatableP", "_isNot"]
+- ["s9EquatableP", "_lessThan"]
+- ["s9EquatableP", "_lessThanOrEqual"]
+- ["s9EquatableP", "_like"]
+- ["s9EquatableP", "_match"]
+- ["s9EquatableP", "_modulo"]
+- ["s9EquatableP", "_multiply"]
+- ["s9EquatableP", "_notEqual"]
+- ["s9EquatableP", "_notGlob"]
+- ["s9EquatableP", "_notIn"]
+- ["s9EquatableP", "_notLike"]
+- ["s9EquatableP", "_notMatch"]
+- ["s9EquatableP", "_notRegexp"]
+- ["s9EquatableP", "_or"]
+- ["s9EquatableP", "_regexp"]
+- ["s9EquatableP", "_subtract"]
+- ["s9EquatableP", "add"]
+- ["s9EquatableP", "and"]
+- ["s9EquatableP", "concatenate"]
+- ["s9EquatableP", "divide"]
+- ["s9EquatableP", "equal"]
+- ["s9EquatableP", "greaterThan"]
+- ["s9EquatableP", "greaterThanOrEqual"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "ilike"]
+- ["s9EquatableP", "in"]
+- !private ["s9EquatableP", "init"]
+- ["s9EquatableP", "lessThan"]
+- ["s9EquatableP", "lessThanOrEqual"]
+- ["s9EquatableP", "like"]
+- ["s9EquatableP", "modulo"]
+- ["s9EquatableP", "multiply"]
+- ["s9EquatableP", "notEqual"]
+- ["s9EquatableP", "notILike"]
+- ["s9EquatableP", "notIn"]
+- ["s9EquatableP", "notLike"]
+- ["s9EquatableP", "or"]
+- ["s9EquatableP", "serialize"]
+- ["s9EquatableP", "subtract"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_add"]
+- ["s8HashableP", "_and"]
+- ["s8HashableP", "_bitwiseAnd"]
+- ["s8HashableP", "_bitwiseOr"]
+- ["s8HashableP", "_bitwiseShiftLeft"]
+- ["s8HashableP", "_bitwiseShiftRight"]
+- ["s8HashableP", "_concatenate"]
+- ["s8HashableP", "_divide"]
+- ["s8HashableP", "_equal"]
+- ["s8HashableP", "_glob"]
+- ["s8HashableP", "_greaterThan"]
+- ["s8HashableP", "_greaterThanOrEqual"]
+- ["s8HashableP", "_in"]
+- ["s8HashableP", "_is"]
+- ["s8HashableP", "_isNot"]
+- ["s8HashableP", "_lessThan"]
+- ["s8HashableP", "_lessThanOrEqual"]
+- ["s8HashableP", "_like"]
+- ["s8HashableP", "_match"]
+- ["s8HashableP", "_modulo"]
+- ["s8HashableP", "_multiply"]
+- ["s8HashableP", "_notEqual"]
+- ["s8HashableP", "_notGlob"]
+- ["s8HashableP", "_notIn"]
+- ["s8HashableP", "_notLike"]
+- ["s8HashableP", "_notMatch"]
+- ["s8HashableP", "_notRegexp"]
+- ["s8HashableP", "_or"]
+- ["s8HashableP", "_regexp"]
+- ["s8HashableP", "_subtract"]
+- ["s8HashableP", "add"]
+- ["s8HashableP", "and"]
+- ["s8HashableP", "concatenate"]
+- ["s8HashableP", "divide"]
+- ["s8HashableP", "equal"]
+- ["s8HashableP", "greaterThan"]
+- ["s8HashableP", "greaterThanOrEqual"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "ilike"]
+- ["s8HashableP", "in"]
+- !private ["s8HashableP", "init"]
+- ["s8HashableP", "lessThan"]
+- ["s8HashableP", "lessThanOrEqual"]
+- ["s8HashableP", "like"]
+- ["s8HashableP", "modulo"]
+- ["s8HashableP", "multiply"]
+- ["s8HashableP", "notEqual"]
+- ["s8HashableP", "notILike"]
+- ["s8HashableP", "notIn"]
+- ["s8HashableP", "notLike"]
+- ["s8HashableP", "or"]
+- ["s8HashableP", "serialize"]
+- ["s8HashableP", "subtract"]
+- !private ["4Core23LosslessDataConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "Encodable"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "PostgreSQLBinaryOperator"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "String"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "__derived_enum_equals"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_add"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_and"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_bitwiseAnd"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_bitwiseOr"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_bitwiseShiftLeft"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_bitwiseShiftRight"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_concatenate"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_divide"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_equal"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_glob"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_greaterThan"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_greaterThanOrEqual"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_in"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_is"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_isNot"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_lessThan"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_lessThanOrEqual"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_like"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_match"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_modulo"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_multiply"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_notEqual"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_notGlob"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_notIn"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_notLike"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_notMatch"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_notRegexp"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_or"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_regexp"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "_subtract"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "add"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "and"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "concatenate"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "deinit"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "divide"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "equal"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "greaterThan"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "greaterThanOrEqual"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "hashValue"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "ilike"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "in"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "lessThan"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "lessThanOrEqual"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "like"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "modulo"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "multiply"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "notEqual"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "notILike"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "notIn"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "notLike"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "or"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "serialize"]
+- ["10PostgreSQL0A17SQLBinaryOperatorO", "subtract"]
+- !private ["10PostgreSQL0A18SQLDataConvertibleP", "init"]
+- !private ["10PostgreSQL0A30SQLDataTypeStaticRepresentableP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["4Core19ReflectionDecodableP", "init"]
+- ["3SQL17SQLBinaryOperatorP", ""]
+- ["3SQL17SQLBinaryOperatorP", "_add"]
+- ["3SQL17SQLBinaryOperatorP", "_and"]
+- ["3SQL17SQLBinaryOperatorP", "_bitwiseAnd"]
+- ["3SQL17SQLBinaryOperatorP", "_bitwiseOr"]
+- ["3SQL17SQLBinaryOperatorP", "_bitwiseShiftLeft"]
+- ["3SQL17SQLBinaryOperatorP", "_bitwiseShiftRight"]
+- ["3SQL17SQLBinaryOperatorP", "_concatenate"]
+- ["3SQL17SQLBinaryOperatorP", "_divide"]
+- ["3SQL17SQLBinaryOperatorP", "_equal"]
+- ["3SQL17SQLBinaryOperatorP", "_glob"]
+- ["3SQL17SQLBinaryOperatorP", "_greaterThan"]
+- ["3SQL17SQLBinaryOperatorP", "_greaterThanOrEqual"]
+- ["3SQL17SQLBinaryOperatorP", "_in"]
+- ["3SQL17SQLBinaryOperatorP", "_is"]
+- ["3SQL17SQLBinaryOperatorP", "_isNot"]
+- ["3SQL17SQLBinaryOperatorP", "_lessThan"]
+- ["3SQL17SQLBinaryOperatorP", "_lessThanOrEqual"]
+- ["3SQL17SQLBinaryOperatorP", "_like"]
+- ["3SQL17SQLBinaryOperatorP", "_match"]
+- ["3SQL17SQLBinaryOperatorP", "_modulo"]
+- ["3SQL17SQLBinaryOperatorP", "_multiply"]
+- ["3SQL17SQLBinaryOperatorP", "_notEqual"]
+- ["3SQL17SQLBinaryOperatorP", "_notGlob"]
+- ["3SQL17SQLBinaryOperatorP", "_notIn"]
+- ["3SQL17SQLBinaryOperatorP", "_notLike"]
+- ["3SQL17SQLBinaryOperatorP", "_notMatch"]
+- ["3SQL17SQLBinaryOperatorP", "_notRegexp"]
+- ["3SQL17SQLBinaryOperatorP", "_or"]
+- ["3SQL17SQLBinaryOperatorP", "_regexp"]
+- ["3SQL17SQLBinaryOperatorP", "_subtract"]
+- ["3SQL17SQLBinaryOperatorP", "add"]
+- ["3SQL17SQLBinaryOperatorP", "and"]
+- ["3SQL17SQLBinaryOperatorP", "concatenate"]
+- ["3SQL17SQLBinaryOperatorP", "divide"]
+- ["3SQL17SQLBinaryOperatorP", "equal"]
+- ["3SQL17SQLBinaryOperatorP", "greaterThan"]
+- ["3SQL17SQLBinaryOperatorP", "greaterThanOrEqual"]
+- ["3SQL17SQLBinaryOperatorP", "hashValue"]
+- ["3SQL17SQLBinaryOperatorP", "ilike"]
+- ["3SQL17SQLBinaryOperatorP", "in"]
+- ["3SQL17SQLBinaryOperatorP", "lessThan"]
+- ["3SQL17SQLBinaryOperatorP", "lessThanOrEqual"]
+- ["3SQL17SQLBinaryOperatorP", "like"]
+- ["3SQL17SQLBinaryOperatorP", "modulo"]
+- ["3SQL17SQLBinaryOperatorP", "multiply"]
+- ["3SQL17SQLBinaryOperatorP", "notEqual"]
+- ["3SQL17SQLBinaryOperatorP", "notILike"]
+- ["3SQL17SQLBinaryOperatorP", "notIn"]
+- ["3SQL17SQLBinaryOperatorP", "notLike"]
+- ["3SQL17SQLBinaryOperatorP", "or"]
+- ["3SQL17SQLBinaryOperatorP", "serialize"]
+- ["3SQL17SQLBinaryOperatorP", "subtract"]
+- ["3SQL15SQLSerializableP", ""]
+- ["3SQL15SQLSerializableP", "_add"]
+- ["3SQL15SQLSerializableP", "_and"]
+- ["3SQL15SQLSerializableP", "_bitwiseAnd"]
+- ["3SQL15SQLSerializableP", "_bitwiseOr"]
+- ["3SQL15SQLSerializableP", "_bitwiseShiftLeft"]
+- ["3SQL15SQLSerializableP", "_bitwiseShiftRight"]
+- ["3SQL15SQLSerializableP", "_concatenate"]
+- ["3SQL15SQLSerializableP", "_divide"]
+- ["3SQL15SQLSerializableP", "_equal"]
+- ["3SQL15SQLSerializableP", "_glob"]
+- ["3SQL15SQLSerializableP", "_greaterThan"]
+- ["3SQL15SQLSerializableP", "_greaterThanOrEqual"]
+- ["3SQL15SQLSerializableP", "_in"]
+- ["3SQL15SQLSerializableP", "_is"]
+- ["3SQL15SQLSerializableP", "_isNot"]
+- ["3SQL15SQLSerializableP", "_lessThan"]
+- ["3SQL15SQLSerializableP", "_lessThanOrEqual"]
+- ["3SQL15SQLSerializableP", "_like"]
+- ["3SQL15SQLSerializableP", "_match"]
+- ["3SQL15SQLSerializableP", "_modulo"]
+- ["3SQL15SQLSerializableP", "_multiply"]
+- ["3SQL15SQLSerializableP", "_notEqual"]
+- ["3SQL15SQLSerializableP", "_notGlob"]
+- ["3SQL15SQLSerializableP", "_notIn"]
+- ["3SQL15SQLSerializableP", "_notLike"]
+- ["3SQL15SQLSerializableP", "_notMatch"]
+- ["3SQL15SQLSerializableP", "_notRegexp"]
+- ["3SQL15SQLSerializableP", "_or"]
+- ["3SQL15SQLSerializableP", "_regexp"]
+- ["3SQL15SQLSerializableP", "_subtract"]
+- ["3SQL15SQLSerializableP", "add"]
+- ["3SQL15SQLSerializableP", "and"]
+- ["3SQL15SQLSerializableP", "concatenate"]
+- ["3SQL15SQLSerializableP", "divide"]
+- ["3SQL15SQLSerializableP", "equal"]
+- ["3SQL15SQLSerializableP", "greaterThan"]
+- ["3SQL15SQLSerializableP", "greaterThanOrEqual"]
+- ["3SQL15SQLSerializableP", "hashValue"]
+- ["3SQL15SQLSerializableP", "ilike"]
+- ["3SQL15SQLSerializableP", "in"]
+- ["3SQL15SQLSerializableP", "lessThan"]
+- ["3SQL15SQLSerializableP", "lessThanOrEqual"]
+- ["3SQL15SQLSerializableP", "like"]
+- ["3SQL15SQLSerializableP", "modulo"]
+- ["3SQL15SQLSerializableP", "multiply"]
+- ["3SQL15SQLSerializableP", "notEqual"]
+- ["3SQL15SQLSerializableP", "notILike"]
+- ["3SQL15SQLSerializableP", "notIn"]
+- ["3SQL15SQLSerializableP", "notLike"]
+- ["3SQL15SQLSerializableP", "or"]
+- ["3SQL15SQLSerializableP", "serialize"]
+- ["3SQL15SQLSerializableP", "subtract"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "4Core22AnyReflectionDecodableP"
+- !private "4Core21BasicKeyRepresentableP"
+- !private "s23BidirectionalCollectionP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "4Core23LosslessDataConvertibleP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "10PostgreSQL0A17SQLBinaryOperatorO"
+- !private "10PostgreSQL0A18SQLDataConvertibleP"
+- !private "10PostgreSQL0A30SQLDataTypeStaticRepresentableP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "4Core19ReflectionDecodableP"
+- "3SQL17SQLBinaryOperatorP"
+- "3SQL15SQLSerializableP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/SQL.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOOpenSSL.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIO.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOTLS.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Async.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Service.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Core.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Debugging.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/COperatingSystem.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Random.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Crypto.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOConcurrencyHelpers.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/Bits.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/NIOFoundationCompat.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/DatabaseKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/asn1.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/tls1.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/dtls1.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pkcs12.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl2.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pem2.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl23.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl3.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/x509v3.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/md5.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pkcs7.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/x509.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/sha.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/dsa.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ecdsa.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/rsa.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/obj_mac.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/hmac.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ec.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIOAtomics/include/cpp_magic.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/rand.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/conf.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/opensslconf.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/dh.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ecdh.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/lhash.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/stack.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/safestack.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ssl.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl.git-1370587408992578247/Sources/CNIOOpenSSL/include/c_nio_openssl.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/pem.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/bn.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIODarwin/include/c_nio_darwin.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/bio.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/crypto.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/srtp.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/evp.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/ossl_typ.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/buffer.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/err.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIOAtomics/include/c-atomics.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/opensslfeatures.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/objects.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/opensslv.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/CNIOLinux/include/c_nio_linux.h"
+- "/usr/local/Cellar/libressl/2.7.3/include/openssl/x509_vfy.h"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-ssl-support.git--2359138821295600615/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/checkouts/swift-nio-zlib-support.git--1071467962839356487/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOSHA1.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOOpenSSL.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOZlib.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIODarwin.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOHTTPParser.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOAtomics.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/x86_64-apple-macosx10.10/debug/CNIOLinux.build/module.modulemap"
+- "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/libbcrypt/include/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "0d289b706851d4a6a290b9aad6687230"

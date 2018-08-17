@@ -1,0 +1,17 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "f1c64bd6d669f42133d9d6b6b1cd57e7"
+build_time: [1534507268, 815871000]
+inputs:
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/BCrypt/BCryptDigest.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/Cipher/Cipher.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/Cipher/CipherAlgorithm.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/Digest/Digest.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/Digest/DigestAlgorithm.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/MAC/HMAC.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/RSA/RSA.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/RSA/RSAKey.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/RSA/RSAPadding.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/Random/CryptoRandom.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/Utilities/CryptoError.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/Utilities/Deprecated.swift": [1534506378, 0]
+  "/Users/nero/SavingThePlanet/.build/checkouts/crypto.git-7980259129511365902/Sources/Crypto/Utilities/Exports.swift": [1534506378, 0]
