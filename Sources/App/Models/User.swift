@@ -8,7 +8,7 @@
 import Authentication
 import FluentPostgreSQL
 
-final class User: PostgreSQLModel,Content {
+final class User: PostgreSQLModel {
     
     typealias Database = PostgreSQLDatabase
     typealias ID = Int
@@ -27,14 +27,7 @@ final class User: PostgreSQLModel,Content {
     }
 }
 
-extension User:BasicAuthenticatable,PasswordAuthenticatable {
-    static func authenticate(username: String, password: String, using verifier: PasswordVerifier, on conn: DatabaseConnectable) -> EventLoopFuture<User?> {
-        return
-    }
-    
-    static func authenticate(using basic: BasicAuthorization, verifier: PasswordVerifier, on connection: DatabaseConnectable) -> EventLoopFuture<User?> {
-        
-    }
+extension User:PasswordAuthenticatable {
     
     static var usernameKey: WritableKeyPath<User, String> {
         return \.email
@@ -44,5 +37,11 @@ extension User:BasicAuthenticatable,PasswordAuthenticatable {
         return \.passwordHash
     }
 }
+
+extension User: PostgreSQLMigration { }
+
+extension User: Content { }
+
+extension User: Parameter { }
 
 
