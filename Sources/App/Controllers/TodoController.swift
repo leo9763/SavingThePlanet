@@ -34,8 +34,6 @@ final class TodoController {
         //Todo.query(on: req).alsoDecode(User.self).all()
     }
     
-    
-    
     func find(_ req: Request) throws -> Future<Todo> {
         /// 通过唯一的id查找
         let future:Future<Todo?> = Todo.find(1, on: req)

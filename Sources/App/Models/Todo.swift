@@ -50,16 +50,18 @@ struct CreateTodo: SQLiteMigration {
 }
 
 /// 当要增加或删减数据表的字段时，选自定义这个Megration注册到Services去
-struct EditDateProperty: Migration {
+struct EditDateProperty: SQLiteMigration {
     
     typealias Database = SQLiteDatabase
     
+    //新增字段
     static func prepare(on conn: SQLiteConnection) -> Future<Void> {
         return Database.update(Todo.self, on: conn) { builder in
             builder.field(for: \.date)
         }
     }
     
+    //删除字段
     static func revert(on conn: SQLiteConnection) -> Future<Void> {
         return Database.update(Todo.self, on: conn) { builder in
             builder.deleteField(for: \.date)

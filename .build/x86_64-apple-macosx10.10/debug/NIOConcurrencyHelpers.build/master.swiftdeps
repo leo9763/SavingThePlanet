@@ -1,6 +1,0 @@
-version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
-options: "5af9b2b38ec35659c652812b479f40a8"
-build_time: [1534526000, 147502000]
-inputs:
-  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOConcurrencyHelpers/atomics.swift": [1534525962, 0]
-  "/Users/neromilk/Documents/SavingThePlanet/.build/checkouts/swift-nio.git-3108475404973543938/Sources/NIOConcurrencyHelpers/lock.swift": [1534525962, 0]
