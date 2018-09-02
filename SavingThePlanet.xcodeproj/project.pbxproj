@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		8C87CFA5212867600030B36A /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87CFA4212867600030B36A /* Plan.swift */; };
+		8C87CFA72136EC6B0030B36A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87CFA62136EC6B0030B36A /* UserController.swift */; };
 		OBJ_1030 /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* TodoController.swift */; };
 		OBJ_1031 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Todo.swift */; };
 		OBJ_1032 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* User.swift */; };
@@ -5841,6 +5842,7 @@
 
 /* Begin PBXFileReference section */
 		8C87CFA4212867600030B36A /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		8C87CFA62136EC6B0030B36A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		"Auth::Authentication::Product" /* Authentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Command::Product" /* Command.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Command.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Console::Product" /* Console.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Console.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -9973,6 +9975,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_10 /* TodoController.swift */,
+				8C87CFA62136EC6B0030B36A /* UserController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -11911,6 +11914,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				8C87CFA72136EC6B0030B36A /* UserController.swift in Sources */,
 				8C87CFA5212867600030B36A /* Plan.swift in Sources */,
 				OBJ_1030 /* TodoController.swift in Sources */,
 				OBJ_1031 /* Todo.swift in Sources */,
