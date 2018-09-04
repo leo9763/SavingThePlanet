@@ -39,8 +39,11 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     var middlewares = MiddlewareConfig() // Create _empty_ middleware config
     //middlewares.use(FileMiddleware.self) // Serves files from `Public/` directory
     middlewares.use(ErrorMiddleware.self) // Catches errors and converts to HTTP response
+    config.prefer(MemoryKeyedCache.self, for: KeyedCache.self) // 设置缓存服务的优先级
+    middlewares.use(SessionsMiddleware.self) // Session 验证的中间件
+    middlewares.use(BasicAuthenticationMiddleware.self)
     services.register(middlewares)
-
+    
     /*
      Configure migrations
      */
