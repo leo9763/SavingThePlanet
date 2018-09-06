@@ -21,7 +21,12 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     let sqlite = try SQLiteDatabase(storage: .file(path: "/Users/neromilk/Documents/SavingThePlanet/todos.sqlite")) // Configure a SQLite database
     databases.add(database: sqlite, as: .sqlite) // Register the configured SQLite database to the database config.
     
-    let postgreSql = PostgreSQLDatabase(config: PostgreSQLDatabaseConfig(hostname: "localhost", port:5432, username: "neromilk", database:"users", password:nil, transport:.cleartext)) // Configure a PostgreSQL database
+    let postgreSql = PostgreSQLDatabase(config: PostgreSQLDatabaseConfig(hostname: "localhost",
+                                                                         port:5432,
+                                                                         username: "neromilk",
+                                                                         database:"users",
+                                                                         password:nil,
+                                                                         transport:.cleartext)) // Configure a PostgreSQL database
     databases.add(database: postgreSql, as: .psql) // Register the configured SQLite database to the database config.
     
     services.register(databases)
@@ -41,7 +46,6 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     middlewares.use(ErrorMiddleware.self) // Catches errors and converts to HTTP response
     config.prefer(MemoryKeyedCache.self, for: KeyedCache.self) // 设置缓存服务的优先级
     middlewares.use(SessionsMiddleware.self) // Session 验证的中间件
-    middlewares.use(BasicAuthenticationMiddleware.self)
     services.register(middlewares)
     
     /*

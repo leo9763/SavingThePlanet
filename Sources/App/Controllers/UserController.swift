@@ -8,10 +8,15 @@
 import Foundation
 import FluentPostgreSQL
 import Vapor
+import Crypto
 
 final class UserController {
     
+    //登录API
     func login(_ req: Request) throws -> Future<HTTPResponse> {
+        // 先释放用户上一次的会话
+        try req.unauthenticateSession(User.self)
+        
         var message: HTTPResponse = HTTPResponse()
         message.contentType = .json
         message.status = .ok
@@ -46,30 +51,48 @@ final class UserController {
         else {
             decodeUser = try req.query.decode(User.self)
         }
-        return User.query(on: req).filter(\.email == decodeUser!.email).first().map { user in
+        
+        return User.authenticate(username:decodeUser!.email,password:decodeUser!.passwordHash,using:BCryptDigest(),on:req).map { user in
             guard let user = user else {
                 message.body = HTTPBody(string: """
-                        {"message": "User name incorrect!"}
+                        {"message": "User auth unsuccessfully!"}
                     """)
                 return message
             }
-            if decodeUser!.passwordHash == user.passwordHash {
-                //认证用户（将在Cookie中返回一个vapor-session字段，其值为一个sessionId给客户端保存，在下次请求中带上作验证的依据）
-                try req.authenticate(user)
-                message.body = HTTPBody(string: """
-                        {"message":"Login successfully!",
-                        "userId":\(user.id!)}
-                    """)
-            }
-            else {
-                message.body = HTTPBody(string: """
-                        {"message": "Password incorrect!"}
-                    """)
-            }
+            //缓存session在服务端（未知与authenticateSession的区别）
+            try req.authenticate(user)
+            
+            message.body = HTTPBody(string: """
+                {"message":"Login successfully!",
+                "userId":\(user.id!)}
+                """)
             return message
         }
     }
     
+    //检查会话状态API
+    func checkLogin(_ req: Request) throws -> Future<HTTPResponse> {
+        var message: HTTPResponse = HTTPResponse()
+        message.contentType = .json
+        message.status = .ok
+        
+        if try req.isAuthenticated(User.self) {
+            return Future.map(on: req) {
+                message.body = HTTPBody(string: """
+                        {"message": "User is authenticated!"}
+                    """)
+                return message
+            }
+        }
+        return Future.map(on: req) {
+            message.body = HTTPBody(string: """
+                        {"message": "User is unauthenticated!"}
+                    """)
+            return message
+        }
+    }
+    
+    //注册API
     func register(_ req: Request) throws -> Future<HTTPResponse> {
         
         var message: HTTPResponse = HTTPResponse()
@@ -109,15 +132,16 @@ final class UserController {
                 return Future.map(on: req) { message }
             }
             else {
-                return self._saveUser(decodeUser!, on: req)
+                return try self._saveUser(decodeUser!, on: req)
             }
         }
     }
     
-    private func _saveUser(_ user: User, on conn: DatabaseConnectable) -> Future<HTTPResponse> {
+    private func _saveUser(_ user: User, on conn: DatabaseConnectable) throws -> Future<HTTPResponse> {
         var message: HTTPResponse = HTTPResponse()
         message.contentType = .json
         message.status = .ok
+        
         guard !user.email.isEmpty else {
             message.body = HTTPBody(string: """
                         {"message": "Missing user email!"}
@@ -130,6 +154,7 @@ final class UserController {
                     """)
             return Future.map(on: conn) { message }
         }
+        user.passwordHash = try BCryptDigest().hash(user.passwordHash)
         return user.save(on: conn).map() { user in
             if let id = user.id {
                 message.body = HTTPBody(string: """
