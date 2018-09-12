@@ -14,11 +14,14 @@ let package = Package(
         //Auth
         .package(url: "https://github.com/vapor/auth.git", from: "2.0.1"),
         
-        /// mail Server
-        .package(url: "https://github.com/IBM-Swift/Swift-SMTP.git", from: "4.0.1")
+        ///Mail Server
+        .package(url: "https://github.com/IBM-Swift/Swift-SMTP.git", from: "4.0.1"),
+        
+        //View
+        .package(url: "https://github.com/vapor/leaf.git", from: "3.0.0")
     ],
     targets: [
-        .target(name: "App", dependencies: ["FluentPostgreSQL", "FluentSQLite", "Vapor", "Authentication", "SwiftSMTP"]),
+        .target(name: "App", dependencies: ["FluentPostgreSQL", "FluentSQLite", "Vapor", "Authentication", "SwiftSMTP","Leaf"]),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App"])
     ]

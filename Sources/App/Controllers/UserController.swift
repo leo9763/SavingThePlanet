@@ -9,6 +9,7 @@ import Foundation
 import FluentPostgreSQL
 import Vapor
 import Crypto
+import Leaf
 
 final class UserController {
     
@@ -71,25 +72,28 @@ final class UserController {
     }
     
     //检查会话状态API
-    func checkLogin(_ req: Request) throws -> Future<HTTPResponse> {
-        var message: HTTPResponse = HTTPResponse()
-        message.contentType = .json
-        message.status = .ok
+    func checkLogin(_ req: Request) throws -> Future<View> {
         
         if try req.isAuthenticated(User.self) {
-            return Future.map(on: req) {
-                message.body = HTTPBody(string: """
-                        {"message": "User is authenticated!"}
-                    """)
-                return message
-            }
+            let decodeUser = try req.content.decode(User.self).wait()
+            return try req.view().render("home", decodeUser)
         }
-        return Future.map(on: req) {
-            message.body = HTTPBody(string: """
-                        {"message": "User is unauthenticated!"}
-                    """)
-            return message
+        else {
+            return try req.view().render("home")
         }
+//            return Future.map(on: req) {
+//                message.body = HTTPBody(string: """
+//                        {"message": "User is authenticated!"}
+//                    """)
+//                return message
+//            }
+//        }
+//        return Future.map(on: req) {
+//            message.body = HTTPBody(string: """
+//                        {"message": "User is unauthenticated!"}
+//                    """)
+//            return message
+//        }
     }
     
     //注册API

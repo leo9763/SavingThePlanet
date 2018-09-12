@@ -2,6 +2,7 @@ import FluentSQLite
 import FluentPostgreSQL
 import Authentication
 import Vapor
+import Leaf
 
 /// Called before your application initializes.
 public func configure(_ config: inout Config, _ env: inout Environment, _ services: inout Services) throws {
@@ -42,7 +43,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
      Register middleware
      */
     var middlewares = MiddlewareConfig() // Create _empty_ middleware config
-    //middlewares.use(FileMiddleware.self) // Serves files from `Public/` directory
+    middlewares.use(FileMiddleware.self) // Serves files from `Public/` directory
     middlewares.use(ErrorMiddleware.self) // Catches errors and converts to HTTP response
     config.prefer(MemoryKeyedCache.self, for: KeyedCache.self) // 设置缓存服务的优先级
     middlewares.use(SessionsMiddleware.self) // Session 验证的中间件
@@ -58,6 +59,12 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     
     services.register(migrations)
     
+    
+    /*
+     Configure and register leaf
+     */
+    config.prefer(LeafRenderer.self, for: ViewRenderer.self)
+    try services.register(LeafProvider())
     
     
     /*
