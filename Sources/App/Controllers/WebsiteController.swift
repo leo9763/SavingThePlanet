@@ -13,7 +13,7 @@ struct WebsiteController: RouteCollection {
         router.get("/",use: homeHandler)
         router.get("home",use: homeHandler)
         router.get("login",use: loginHandler)
-        router.get("register",user: rigisterHandler)
+        router.get("register",use: rigisterHandler)
     }
     
     func loginHandler(_ req: Request) throws -> Future<View> {
@@ -24,8 +24,8 @@ struct WebsiteController: RouteCollection {
         return try req.view().render("home")
     }
     
-    func rigisterHandler(_ req: Request) -> Future<View> {
-        return try req.view().render("login")
+    func rigisterHandler(_ req: Request) throws -> Future<View> {
+        return try req.view().render("register")
     }
 }
 
