@@ -2,34 +2,44 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-                    <title>登录</title>
-                    
-                    <!-- Bootstrap -->
-                    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>注册</title>
     </head>
-    <body>
-        <form class="form-horizontal" method="POST" action="/authlogin">
-            <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">登录工号/邮箱</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="输入工号/邮箱" name="account">
-                </div>
+    <body style="background:url(register/images/earth_long.png) no-repeat; height: 740px; background-size:cover;">
+        <div class="container">
+            <div class="col-sm-offset-9 col-sm-3" style="margin-top: 100px">
+                <form class="form form-horizontal" method="POST" action="/api/register" style="color: #ffffff" role="registerForm" name="registerForm" id="registerForm">
+                    <h3 class="text-center">用户注册</h3>
+                    <div class="form-group">
+                        <label for="email" class="control-label" style="color: #ffffff">邮&nbsp;箱</label>
+                        <input type="text" class="form-control" id="email" placeholder="请输入邮箱" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label" style="color: #ffffff">密&nbsp;码</label>
+                        <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="captcha" class="control-label" style="color: #ffffff">验证码</label>
+                        <input type="captcha" class="form-control" id="captcha" placeholder="请输入验证码" name="captcha">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <a href="/verify" class="btn btn-warning col-xs-4" value="verify">发送验证码</a>
+                            <div class="col-xs-2"></div>
+                            <button type="button" class="btn btn-success col-xs-6" value="register" onclick="register();">注册</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="inputPassword3" class="col-sm-2 control-label">登录密码</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="输入登录密码" name="password">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary" value="login">立即登录</button>
-                </div>
-            </div>
-        </form>
+        </div>
+
+
+        
         
         <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
         <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
@@ -37,3 +47,43 @@
         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </body>
 </html>
+
+<script src="http://www.gongjuji.net/Content/files/jquery.md5.js"></script>
+<script type="text/javascript">
+    function register() {
+        var email = $("#email").val();
+        var password = $("#password").val();
+        if ($.trim(email) == "" || $.trim(password) == "") {
+            alert("请填写登录的邮箱及密码~");
+            return false;
+        }
+        else {
+            password = $.md5(password);
+
+            var data = {
+                email:email,
+                passwordHash:password
+            };
+            $.ajax({
+                url:"/signup",
+                type: 'POST',
+                data:data,
+                cache:true,
+                async:true,
+                beforeSend:function(){
+
+                },
+                success:function(result){
+                    alert(result.message);
+                    window.location.href="/";
+                },
+                complete:function(){
+
+                },
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    alert(""+XMLHttpRequest.readyState + textStatus);
+                }
+            });
+      }
+    }
+</script>

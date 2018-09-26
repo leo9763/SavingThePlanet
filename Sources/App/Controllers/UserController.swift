@@ -10,168 +10,154 @@ import FluentPostgreSQL
 import Vapor
 import Crypto
 import Leaf
+import SwiftSMTP
 
 final class UserController {
     
     //登录API
-    func login(_ req: Request) throws -> Future<HTTPResponse> {
-        // 先释放用户上一次的会话
+    func signin(_ req: Request) throws -> Future<HTTPResponse> {
+
         try req.unauthenticateSession(User.self)
         
-        var message: HTTPResponse = HTTPResponse()
-        message.contentType = .json
-        message.status = .ok
-        var decodeUser:User?
-        
-        if req.http.method == .POST {
-            decodeUser = try req.content.decode(User.self).wait()
-            /* 方法二
-            return try req.content.decode(User.self).flatMap() { decodeUser in
-                
-                return User.query(on: req).filter(\.email == decodeUser.email).first().map { user in
-                    guard let user = user else {
-                        message.body = HTTPBody(string: """
-                        {"message": "User name incorrect!"}
-                    """)
-                        return message
-                    }
-                    if decodeUser.passwordHash == user.passwordHash {
-                        try req.authenticate(user) //cookie named "vapor-session" has been added to your browser.
-                        return HTTPResponse(status: .ok)
-                    }
-                    else {
-                        message.body = HTTPBody(string: """
-                            {"message": "Password incorrect!"}
-                        """)
-                        return message
-                    }
-                }
-            }
-             */
-        }
-        else {
-            decodeUser = try req.query.decode(User.self)
-        }
-        
-        return User.authenticate(username:decodeUser!.email,password:decodeUser!.passwordHash,using:BCryptDigest(),on:req).map { user in
+        let handler = {(user: User?) throws -> HTTPResponse in
+            
             guard let user = user else {
-                message.body = HTTPBody(string: """
-                        {"message": "User auth unsuccessfully!"}
-                    """)
-                return message
+                let body = ["message":"User auth unsuccessfully!","code":"1001"]
+                return try jsonResponse(inBody: body)
             }
             //缓存session在服务端（未知与authenticateSession的区别）
             try req.authenticate(user)
-            
-            message.body = HTTPBody(string: """
-                {"message":"Login successfully!",
-                "userId":\(user.id!)}
-                """)
-            return message
+            let body = ["message":"Login successfully!",
+                        "code":"1000",
+                        "userId":"\(user.id!)"]
+            return try jsonResponse(inBody: body)
+        }
+        
+        if req.http.method == .POST {
+            return try req.content.decode(User.self).flatMap { decodeUser in
+                return User.authenticate(username:decodeUser.email,
+                                         password:decodeUser.passwordHash,
+                                         using:BCryptDigest(),
+                                         on:req).map { user in
+                    return try handler(user)
+                }
+            }
+        }
+        else {
+            let decodeUser:User = try req.query.decode(User.self)
+            return User.authenticate(username:decodeUser.email,
+                                     password:decodeUser.passwordHash,
+                                     using:BCryptDigest(),
+                                     on:req).map(handler)
         }
     }
     
-    //检查会话状态API
-    func checkLogin(_ req: Request) throws -> Future<View> {
-        
-        if try req.isAuthenticated(User.self) {
-            let decodeUser = try req.content.decode(User.self).wait()
-            return try req.view().render("home", decodeUser)
-        }
-        else {
-            return try req.view().render("home")
-        }
-//            return Future.map(on: req) {
-//                message.body = HTTPBody(string: """
-//                        {"message": "User is authenticated!"}
-//                    """)
-//                return message
-//            }
-//        }
-//        return Future.map(on: req) {
-//            message.body = HTTPBody(string: """
-//                        {"message": "User is unauthenticated!"}
-//                    """)
-//            return message
-//        }
+    func signout(_ req: Request) throws -> Future<HTTPResponse> {
+        try req.unauthenticateSession(User.self)
+        return Future.map(on: req) { try jsonResponse(inBody: ["message":"Login successfully!","code":"1000"]) }
     }
     
     //注册API
-    func register(_ req: Request) throws -> Future<HTTPResponse> {
+    func signup(_ req: Request) throws -> Future<HTTPResponse> {
         
-        var message: HTTPResponse = HTTPResponse()
-        message.contentType = .json
-        message.status = .ok
         var decodeUser:User?
         
-        if req.http.method == .POST {
-            /* 解析模型的方法一
-             //若body中的数据量大时可以采用异步的返回方式
-            return try req.content.decode(User.self).flatMap() { decodeUser in
-                return User.query(on: req).filter(\.email == decodeUser.email).first().flatMap { user in
-                    if let _ = user {
-                        message.body = HTTPBody(string: """
-                            {"message": "User already exists!"}
-                        """)
-                        return Future.map(on: req) { message }
-                    }
-                    else {
-                        return self._saveUser(decodeUser, on: req)
+        let handler = {(user:User?) throws -> Future<HTTPResponse> in
+            
+            if let _ = user {
+                return Future.map(on: req) { try jsonResponse(inBody: ["message":"User already exists!","code":"1001"]) }
+            }
+            else {
+                guard let toSaveUser = decodeUser else {
+                    return Future.map(on: req) {
+                        return try jsonResponse(inBody: ["message":"Register user info failly by decoding!","code":"1001"])
                     }
                 }
+                return try self._saveUser(toSaveUser, on: req)
             }
-            */
-            
-            /* 解析模型的方法二 */
-            decodeUser = try req.content.decode(User.self).wait()
+        }
+        
+        if req.http.method == .POST {
+            return try req.content.decode(User.self).flatMap { user in
+                decodeUser = user
+                return User.query(on: req).filter(\.email == decodeUser!.email).first().flatMap(handler)
+            }
         }
         else {
             decodeUser = try req.query.decode(User.self)
+            return User.query(on: req).filter(\.email == decodeUser!.email).first().flatMap(handler)
         }
-        return User.query(on: req).filter(\.email == decodeUser!.email).first().flatMap { user in
-            if let _ = user {
-                message.body = HTTPBody(string: """
-                            {"message": "User already exists!"}
-                        """)
-                return Future.map(on: req) { message }
+    }
+    
+    private func _saveUser(_ user: User, on conn: Request) throws -> Future<HTTPResponse> {
+        
+        guard !user.email.isEmpty else {
+            let body = ["message":"Missing user email!","code":"1001"]
+            return Future.map(on: conn) { try jsonResponse(inBody: body) }
+        }
+        guard !user.passwordHash.isEmpty else {
+            let body = ["message":"Missing user password!","code":"1001"]
+            return Future.map(on: conn) { try jsonResponse(inBody: body) }
+        }
+        user.passwordHash = try BCryptDigest().hash(user.passwordHash)
+        return user.save(on: conn).map() { user in
+            var body:[String:String]
+            if let id = user.id {
+                body = ["message":"Create user successfully!",
+                        "code":"1000",
+                        "userId":"\(id)"]
+                try conn.authenticate(user)
             }
             else {
-                return try self._saveUser(decodeUser!, on: req)
+                body = ["message":"Create user fail!","code":"1001"]
+            }
+            return try jsonResponse(inBody: body)
+        }
+    }
+    
+    func sendCAPTCHA(_ req: Request) throws -> Future<HTTPResponse> {
+        
+        if req.http.method == .POST {
+            
+        }
+        let email = "xxx@gmail.com"
+        
+        var verifyCode = emailDic[email]
+        
+        if verifyCode == nil{
+            verifyCode = randomNumericString(length: 4)
+        }
+        let userMail = Mail.User(email: email)
+        
+        let mail = Mail(
+            from: PUBGNewsBoxMailAddress,
+            to: [userMail],
+            subject: "欢迎注册为救救这星球的用户",
+            text: "您本次注册的验证码为：\(verifyCode!)"
+        )
+        var result = true
+        smtp.send(mail) { (error) in
+            if let error = error {
+                print(error)
+                result = false
+            }else{
+                self.emailDic[email] = verifyCode!
+            }
+        }
+        
+        return Future.map(on: req) {
+            if result {
+                return try jsonResponse(inBody: ["message":"Send successfully!","code":"1000"])
+            }
+            else {
+                return try jsonResponse(inBody: ["message":"Send fail!","code":"1001"])
             }
         }
     }
     
-    private func _saveUser(_ user: User, on conn: DatabaseConnectable) throws -> Future<HTTPResponse> {
-        var message: HTTPResponse = HTTPResponse()
-        message.contentType = .json
-        message.status = .ok
-        
-        guard !user.email.isEmpty else {
-            message.body = HTTPBody(string: """
-                        {"message": "Missing user email!"}
-                    """)
-            return Future.map(on: conn) { message }
-        }
-        guard !user.passwordHash.isEmpty else {
-            message.body = HTTPBody(string: """
-                        {"message": "Missing user password!"}
-                    """)
-            return Future.map(on: conn) { message }
-        }
-        user.passwordHash = try BCryptDigest().hash(user.passwordHash)
-        return user.save(on: conn).map() { user in
-            if let id = user.id {
-                message.body = HTTPBody(string: """
-                        {"message":"Create user successfully!",
-                        "userId":\(id)}
-                    """)
-            }
-            else {
-                message.body = HTTPBody(string: """
-                        {"message":"Create user unsuccessfully!"}
-                    """)
-            }
-            return message
-        }
-    }
+    fileprivate var emailDic = Dictionary<String,String>()
+    fileprivate let smtp = SMTP(hostname: "邮箱SMTP服务地址",
+                                email: "这里填你的邮箱地址",
+                                password: "密码")
+    fileprivate let PUBGNewsBoxMailAddress = Mail.User(name: "发件人名称", email: "发件人邮箱")
 }

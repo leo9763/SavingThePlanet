@@ -31,6 +31,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		8C41C44D215BD0CC00F0E77D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C41C44C215BD0CC00F0E77D /* Network.swift */; };
+		8C41C44F215BDB8700F0E77D /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C41C44E215BDB8700F0E77D /* Numeric.swift */; };
 		8CC943E221495B1500E85EE4 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 8CC943E121495B1500E85EE4 /* Resources */; };
 		8CC943E42149617D00E85EE4 /* WebsiteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC943E32149617D00E85EE4 /* WebsiteController.swift */; };
 		OBJ_1096 /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* TodoController.swift */; };
@@ -6211,6 +6213,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C41C44C215BD0CC00F0E77D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		8C41C44E215BDB8700F0E77D /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
 		8CC943E121495B1500E85EE4 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		8CC943E32149617D00E85EE4 /* WebsiteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteController.swift; sourceTree = "<group>"; };
 		"Auth::Authentication::Product" /* Authentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -8130,6 +8134,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C41C44B215BD0B600F0E77D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8C41C44C215BD0CC00F0E77D /* Network.swift */,
+				8C41C44E215BDB8700F0E77D /* Numeric.swift */,
+			);
+			name = Util;
+			path = Sources/Util;
+			sourceTree = SOURCE_ROOT;
+		};
 		OBJ_100 /* Persist */ = {
 			isa = PBXGroup;
 			children = (
@@ -9261,7 +9275,7 @@
 			path = ".build/checkouts/vapor.git-5492988889259800272/Sources/BoilerplateRun";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -9272,7 +9286,6 @@
 				OBJ_26 /* Dependencies */,
 				OBJ_1037 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_501 /* WebSocket 1.0.1 */ = {
@@ -10182,6 +10195,7 @@
 		OBJ_8 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				8C41C44B215BD0B600F0E77D /* Util */,
 				OBJ_9 /* Controllers */,
 				OBJ_12 /* Models */,
 				OBJ_16 /* app.swift */,
@@ -12733,7 +12747,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_1037 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -12847,7 +12861,9 @@
 				OBJ_1098 /* Plan.swift in Sources */,
 				OBJ_1099 /* Todo.swift in Sources */,
 				OBJ_1100 /* User.swift in Sources */,
+				8C41C44D215BD0CC00F0E77D /* Network.swift in Sources */,
 				OBJ_1101 /* app.swift in Sources */,
+				8C41C44F215BDB8700F0E77D /* Numeric.swift in Sources */,
 				OBJ_1102 /* boot.swift in Sources */,
 				OBJ_1103 /* configure.swift in Sources */,
 				OBJ_1104 /* routes.swift in Sources */,
