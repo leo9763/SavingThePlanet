@@ -1,161 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <!--Responsive-->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!--CSS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--JavaScript-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  <body data-spy="scroll" data-offset="20" style="margin-top:50px;">
-
-    <!--导航栏-->
-    <div class="container">
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-          <a href="/" class="navbar-brand"><img src="home/images/earth.png" style="width: 20; height: 24px;"></a>
-          <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav nav">
-            <li><a href="/">首页</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right" style="margin-right: 30px;">
-            #if(userEmail) {
-              <li><a>#(userEmail)</a></li>
-              <li><a href="/signout">登出</a></li>
-            } else {
-              <li><a href="/register">注册</a></li>
-              <li><a class="nav-link" data-toggle="modal" data-target="#myModal">登录</a></li>
-            }
-          </ul>
-        </div>        
-      </nav>
-    </div>
+#set("content") {
 
     <!--横幅大图-->
     <img src="home/images/home-banner.jpg" width="100%" height="100%"  class="img-responsive"/>
     <div class="row" style="height: 50px;"></div>
 
+    <div style="height:100px;"></div>
+
     <!--内容模块-->
     <div class="container">
       <div class="row">
         #for(module in homeModules) { 
-          <div class="col-sm-4" style="padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;">
-            <a href="#(module.route)"><img src="#(module.imagePath)" width="100%" height="100%"  class="img-responsive"/></a>
+          <div class="col-sm-3" style="margin-top: 10px; margin-bottom: 10px; margin-left: 40px; margin-right: 40px; padding-left: 0px; padding-right: 0px; box-shadow: 5px 6px 10px #DDDDDD; border-radius: 8px; ">
+            <div class="media" style="padding-left: 0px; padding-right: 0px;">
+              <div class="media-body">
+                <div class="media-heading">
+                  <a href="#(module.route)"><img src="#(module.imagePath)" width="100%" height="100%" class="img-responsive" style="border-top-right-radius:8px; border-top-left-radius:8px;" /></a>
+                </div>
+                <h4 class="media-middle" align="center">#(module.title)</h4>
+                <!-- <h5 class="media-bottom">关于#(module.title)，#(module.details)</h5> -->
+              </div>
+            </div>
           </div>
         }
       </div>
     </div>
 
-    <!--登录模态框-->
-    <div id="myModal" class="modal fade"  id="mymodal" tabindex="-1" ole="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 class="modal-title" id="myModalLabel" align="center">账号登录</h3>
-          </div>
-          <div class="modal-body">      
-            <form class="form-horizontal" role="loginForm" name="loginForm" id="loginForm" method="GET">
-              <div class="form-group" id="div1">
-                <label for="firstname" class="col-sm-2 control-label">邮箱：</label>
-                <div class="col-sm-10" id="user">
-                  <input type="text" class="form-control tooltip-test" id="email" placeholder="请输入邮箱" name="email" data-toggle="tooltip" data-placement="bottom" data-trigger="focus" title="请输入6-8位字符或数字任意组合" style="width: 370px" onblur="checkInput();">
-                  <label id="nameAlert" style="color: red;"></label>
-                </div>
-              </div>
+    <div style="height:200px;"></div>
+}
 
-              <div class="form-group" id="div2">
-                <label for="lastname" class="col-sm-2 control-label">密码：</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control tooltip-test" id="password" placeholder="请输入密码" name="passwordHash" data-toggle="tooltip" data-placement="bottom" title="请输入6位密码" data-trigger="focus" style="width: 370px" onblur="checkInput();">
-                  <label id="passwordAlert" style="color: red;"></label>
-                </div>
-              </div>
-
-              <div class="form-group form-inline">
-                <div class="col-sm-offset-2 col-sm-2">
-                  <div class="checkbox">
-                    <label><input type="checkbox">记住</label>
-                  </div>
-                </div>
-
-                <div class="col-sm-offset-1 col-sm-2">
-                  <button type="button" class="btn btn-success" id="loginBtn" onclick="login();">登录</button>
-                </div>
-              </div>  
-            </form>
-          </div>
-          <div class="modal-footer"><a href="/register">没有账号?>>立即注册</a></div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
-
-<script src="http://www.gongjuji.net/Content/files/jquery.md5.js"></script>
-<script type="text/javascript">
-
-      $(function () {
-        /* 用于拖动div标签 */
-        // $( "#mymodal" ).draggable();
-        /*  激活提示框 */
-        // $('#identifier').tooltip(options);
-      });
-
-      function login() {
-        var email = $("#email").val();
-        var password = $("#password").val();
-        if ($.trim(email) == "" || $.trim(password) == "") {
-          alert("请填写登录的邮箱及密码~");
-          return false;
-        }
-        else {
-          password = $.md5(password);
-
-          // document.loginForm.action = '/login?email=' + email + '&passwordHash=' + password;
-          // document.loginForm.submit();
-
-
-          var data = {
-              email:email,
-              passwordHash:password
-          };
-          $.ajax({
-              url:"/signin",
-              type: 'GET',
-              data:data,
-              cache:true,
-              async:true,
-              beforeSend:function(){
-
-              },
-              success:function(result){
-                console.log(result.message);
-                window.location.href="/";
-              },
-              complete:function(){
-
-              },
-              error:function(XMLHttpRequest, textStatus, errorThrown){
-                  alert(""+XMLHttpRequest.readyState + textStatus);
-              }
-          });
-        }
-      }
-
-      function checkInput()
-      {
-
-      }
-    </script>
+#embed("base")
 
 

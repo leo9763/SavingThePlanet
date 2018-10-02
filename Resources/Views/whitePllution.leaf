@@ -1,0 +1,23 @@
+#set("content") {
+<div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <img src="whitePllution/images/left_poster.jpeg" class="img-responsive">
+      </div>
+      <div class="col-sm-6">
+        <div class="jumbotron">
+          <h1>实时统计：</h1>
+          <p>今天消耗了63922800个一次性塑料盒！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+
+#embed("base")
+
+<script type="text/javascript">
+  $(function () {
+    $("body").eq(0).attr("style","background-color:#242424; margin-top:50px;");
+  });
+</script>

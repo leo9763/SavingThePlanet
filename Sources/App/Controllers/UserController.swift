@@ -62,28 +62,45 @@ final class UserController {
         
         var decodeUser:User?
         
+        var inputCaptcha = ""
+        
         let handler = {(user:User?) throws -> Future<HTTPResponse> in
             
             if let _ = user {
                 return Future.map(on: req) { try jsonResponse(inBody: ["message":"User already exists!","code":"1001"]) }
             }
-            else {
-                guard let toSaveUser = decodeUser else {
-                    return Future.map(on: req) {
-                        return try jsonResponse(inBody: ["message":"Register user info failly by decoding!","code":"1001"])
-                    }
+            
+            guard let toSaveUser = decodeUser else {
+                return Future.map(on: req) {
+                    return try jsonResponse(inBody: ["message":"Register user info failly by decoding!","code":"1001"])
                 }
-                return try self._saveUser(toSaveUser, on: req)
             }
+            guard let verifyCode = self.emailDic[toSaveUser.email] else {
+                return Future.map(on: req) { try jsonResponse(inBody: ["message":"No CAPTCHA record!","code":"1001"]) }
+            }
+            
+            if verifyCode != inputCaptcha {
+                self.emailDic[toSaveUser.email] = nil
+                return Future.map(on: req) { try jsonResponse(inBody: ["message":"Wrong CAPTCHA!","code":"1001"]) }
+            }
+            return try self._saveUser(toSaveUser, on: req)
         }
         
         if req.http.method == .POST {
+            
+            inputCaptcha = try req.content.syncGet(String.self, at: "captcha")
+            
             return try req.content.decode(User.self).flatMap { user in
                 decodeUser = user
                 return User.query(on: req).filter(\.email == decodeUser!.email).first().flatMap(handler)
             }
         }
         else {
+            guard let captcha = req.query[String.self, at: "captcha"] else {
+                return Future.map(on: req) { try jsonResponse(inBody: ["message":"Missing CAPTCHA!","code":"1001"]) }
+            }
+            inputCaptcha = captcha
+            
             decodeUser = try req.query.decode(User.self)
             return User.query(on: req).filter(\.email == decodeUser!.email).first().flatMap(handler)
         }
@@ -117,10 +134,13 @@ final class UserController {
     
     func sendCAPTCHA(_ req: Request) throws -> Future<HTTPResponse> {
         
+        var email = ""
         if req.http.method == .POST {
-            
+            email = try req.content.get(String.self, at: "email").wait()
         }
-        let email = "xxx@gmail.com"
+        else {
+            email = try req.query.get(String.self, at: "email")
+        }
         
         var verifyCode = emailDic[email]
         
@@ -135,29 +155,30 @@ final class UserController {
             subject: "欢迎注册为救救这星球的用户",
             text: "您本次注册的验证码为：\(verifyCode!)"
         )
-        var result = true
+        let result = req.eventLoop.newPromise(Bool.self)
         smtp.send(mail) { (error) in
             if let error = error {
                 print(error)
-                result = false
+                result.succeed(result: false)
             }else{
                 self.emailDic[email] = verifyCode!
+                result.succeed(result: true)
             }
         }
-        
-        return Future.map(on: req) {
-            if result {
+        return result.futureResult.map(to: HTTPResponse.self) { isSucceed in
+            if isSucceed {
                 return try jsonResponse(inBody: ["message":"Send successfully!","code":"1000"])
             }
-            else {
+            else{
+                self.emailDic[email] = verifyCode!
                 return try jsonResponse(inBody: ["message":"Send fail!","code":"1001"])
             }
         }
     }
     
     fileprivate var emailDic = Dictionary<String,String>()
-    fileprivate let smtp = SMTP(hostname: "邮箱SMTP服务地址",
-                                email: "这里填你的邮箱地址",
-                                password: "密码")
-    fileprivate let PUBGNewsBoxMailAddress = Mail.User(name: "发件人名称", email: "发件人邮箱")
+    fileprivate let smtp = SMTP(hostname: "smtp.163.com",
+                                email: "Savingtheplanet@163.com",
+                                password: "savingtheplanet1")
+    fileprivate let PUBGNewsBoxMailAddress = Mail.User(name: "Saving The Planet", email: "Savingtheplanet@163.com")
 }

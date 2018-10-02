@@ -1,0 +1,19 @@
+#set("content") {
+<div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <img src="whitePllution/images/left_poster.jpeg" class="img-responsive">
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+  </div>
+}
+
+#embed("base")
+
+<script type="text/javascript">
+  $(function () {
+    $("body").eq(0).attr("style","background-color:#242424; margin-top:50px;");
+  });
+</script>

@@ -29,7 +29,7 @@
                     <br>
                     <div class="form-group">
                         <div class="form-inline">
-                            <a href="/verify" class="btn btn-warning col-xs-4" value="verify">发送验证码</a>
+                            <button type="button" class="btn btn-warning col-xs-4" value="sendCaptcha" onclick="sendCaptcha();">发送验证码</button>
                             <div class="col-xs-2"></div>
                             <button type="button" class="btn btn-success col-xs-6" value="register" onclick="register();">注册</button>
                         </div>
@@ -38,9 +38,6 @@
             </div>
         </div>
 
-
-        
-        
         <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
         <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
         <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
@@ -53,8 +50,9 @@
     function register() {
         var email = $("#email").val();
         var password = $("#password").val();
+        var captcha = $("#captcha").val();
         if ($.trim(email) == "" || $.trim(password) == "") {
-            alert("请填写登录的邮箱及密码~");
+            alert("请填写注册的邮箱及密码~");
             return false;
         }
         else {
@@ -62,7 +60,8 @@
 
             var data = {
                 email:email,
-                passwordHash:password
+                passwordHash:password,
+                captcha:captcha
             };
             $.ajax({
                 url:"/signup",
@@ -84,6 +83,36 @@
                     alert(""+XMLHttpRequest.readyState + textStatus);
                 }
             });
-      }
+        }
+    }
+
+    function sendCaptcha() {
+        var email = $("#email").val();
+        if ($.trim(emailtmp) == "") {
+            alert("请填写接收验证码的邮箱~");
+            return false;
+        }
+        var data = {
+            email:email
+        };
+        $.ajax({
+            url:"/sendCaptcha",
+            type: 'GET',
+            data:data,
+            cache:true,
+            async:true,
+            beforeSend:function(){
+
+            },
+            success:function(result){
+                alert(result.message);
+            },
+            complete:function(){
+
+            },
+            error:function(XMLHttpRequest, textStatus, errorThrown){
+                alert(""+XMLHttpRequest.readyState + textStatus);
+            }
+        });
     }
 </script>

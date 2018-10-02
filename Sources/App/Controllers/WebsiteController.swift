@@ -14,34 +14,55 @@ struct WebsiteController: RouteCollection {
         router.get("/",use: homeHandler)
         router.get("home",use: homeHandler)
         router.get("register",use: rigisterHandler)
+        router.get("airPollution",use: airPollutionHandler)
+        router.get("whitePllution",use: whitePollutionHandler)
+        router.get("environmentScience",use: environmentScienceHandler)
     }
     
     func homeHandler(_ req: Request) throws -> Future<View> {
         
-        var context: homeContext
-        let homeMoudleContexts = [homeModuleContext(imagePath: "home/images/air-pollution.jpg", route: "/register"),
-                                  homeModuleContext(imagePath: "home/images/white_pollution.jpeg", route: "/register"),
-                                  homeModuleContext(imagePath: "home/images/env_protection.jpg", route: "/register")]
-        do {
-            if try req.isAuthenticated(User.self) {
-                let user = try req.requireAuthenticated(User.self)
-                context = homeContext(homeModules:homeMoudleContexts,
-                                      userEmail:user.email)
-            }
-            else {
-                context = homeContext(homeModules:homeMoudleContexts,
-                                      userEmail:nil)
-            }
-            return try req.view().render("home",context)
-        } catch {
-            context = homeContext(homeModules:homeMoudleContexts,
-                                  userEmail:nil)
-            return try req.view().render("home",context)
-        }
+
+        let homeMoudleContexts = [homeModuleContext(imagePath: "home/images/air-pollution.jpg", route: "/airPollution", title: "空气污染"),
+                                  homeModuleContext(imagePath: "home/images/white_pollution.jpeg", route: "/whitePllution", title: "白色污染"),
+                                  homeModuleContext(imagePath: "home/images/env_protection.jpg", route: "/environmentScience", title: "环保科普")]
+        
+        let context = homeContext(homeModules:homeMoudleContexts,
+                                  userEmail:_authenticate(req)?.email)
+        
+        return try req.view().render("home",context)
     }
     
     func rigisterHandler(_ req: Request) throws -> Future<View> {
         return try req.view().render("register")
+    }
+    
+    func whitePollutionHandler(_ req: Request) throws -> Future<View> {
+
+        let context = whitePllutionContext(userEmail:_authenticate(req)?.email)
+        return try req.view().render("whitePllution",context)
+    }
+    
+    func airPollutionHandler(_ req: Request) throws -> Future<View> {
+        let context = whitePllutionContext(userEmail:_authenticate(req)?.email)
+        return try req.view().render("airPollution",context)
+    }
+    
+    func environmentScienceHandler (_ req: Request) throws -> Future<View> {
+        let context = whitePllutionContext(userEmail:_authenticate(req)?.email)
+        return try req.view().render("environmentScience",context)
+    }
+    
+    func _authenticate(_ req:Request) -> User? {
+        do {
+            if try req.isAuthenticated(User.self) {
+                return try req.requireAuthenticated(User.self)
+            }
+            else {
+                return nil
+            }
+        } catch {
+            return nil
+        }
     }
 }
 
@@ -52,4 +73,14 @@ struct homeContext: Encodable {
 struct homeModuleContext: Encodable {
     let imagePath:String
     let route:String
+    let title:String
+}
+struct whitePllutionContext: Encodable {
+    let userEmail:String?
+}
+struct airPollutionContext: Encodable {
+    let userEmail:String?
+}
+struct environmentScienceContext: Encodable {
+    let userEmail:String?
 }

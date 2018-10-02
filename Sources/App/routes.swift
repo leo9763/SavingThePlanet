@@ -22,6 +22,7 @@ public func routes(_ router: Router) throws {
     
     sessionAuth.get("signin", use: userController.signin)//创建sessionID缓存在服务端，并使客户端之后(对sessionAuth)的请求头上带上该sessionID
     sessionAuth.get("signout", use: userController.signout)
+    sessionAuth.get("sendCaptcha", use: userController.sendCAPTCHA)
     
     /*
      2.Web请求
