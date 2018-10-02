@@ -23,14 +23,14 @@ final class UserController {
             
             guard let user = user else {
                 let body = ["message":"User auth unsuccessfully!","code":"1001"]
-                return try jsonResponse(inBody: body)
+                return try NetworkUtil.jsonResponse(inBody: body)
             }
             //缓存session在服务端（未知与authenticateSession的区别）
             try req.authenticate(user)
             let body = ["message":"Login successfully!",
                         "code":"1000",
                         "userId":"\(user.id!)"]
-            return try jsonResponse(inBody: body)
+            return try NetworkUtil.jsonResponse(inBody: body)
         }
         
         if req.http.method == .POST {
@@ -54,7 +54,7 @@ final class UserController {
     
     func signout(_ req: Request) throws -> Future<HTTPResponse> {
         try req.unauthenticateSession(User.self)
-        return Future.map(on: req) { try jsonResponse(inBody: ["message":"Login successfully!","code":"1000"]) }
+        return Future.map(on: req) { try NetworkUtil.jsonResponse(inBody: ["message":"Login successfully!","code":"1000"]) }
     }
     
     //注册API
@@ -67,21 +67,21 @@ final class UserController {
         let handler = {(user:User?) throws -> Future<HTTPResponse> in
             
             if let _ = user {
-                return Future.map(on: req) { try jsonResponse(inBody: ["message":"User already exists!","code":"1001"]) }
+                return Future.map(on: req) { try NetworkUtil.jsonResponse(inBody: ["message":"User already exists!","code":"1001"]) }
             }
             
             guard let toSaveUser = decodeUser else {
                 return Future.map(on: req) {
-                    return try jsonResponse(inBody: ["message":"Register user info failly by decoding!","code":"1001"])
+                    return try NetworkUtil.jsonResponse(inBody: ["message":"Register user info failly by decoding!","code":"1001"])
                 }
             }
             guard let verifyCode = self.emailDic[toSaveUser.email] else {
-                return Future.map(on: req) { try jsonResponse(inBody: ["message":"No CAPTCHA record!","code":"1001"]) }
+                return Future.map(on: req) { try NetworkUtil.jsonResponse(inBody: ["message":"No CAPTCHA record!","code":"1001"]) }
             }
             
             if verifyCode != inputCaptcha {
                 self.emailDic[toSaveUser.email] = nil
-                return Future.map(on: req) { try jsonResponse(inBody: ["message":"Wrong CAPTCHA!","code":"1001"]) }
+                return Future.map(on: req) { try NetworkUtil.jsonResponse(inBody: ["message":"Wrong CAPTCHA!","code":"1001"]) }
             }
             return try self._saveUser(toSaveUser, on: req)
         }
@@ -97,7 +97,7 @@ final class UserController {
         }
         else {
             guard let captcha = req.query[String.self, at: "captcha"] else {
-                return Future.map(on: req) { try jsonResponse(inBody: ["message":"Missing CAPTCHA!","code":"1001"]) }
+                return Future.map(on: req) { try NetworkUtil.jsonResponse(inBody: ["message":"Missing CAPTCHA!","code":"1001"]) }
             }
             inputCaptcha = captcha
             
@@ -110,11 +110,11 @@ final class UserController {
         
         guard !user.email.isEmpty else {
             let body = ["message":"Missing user email!","code":"1001"]
-            return Future.map(on: conn) { try jsonResponse(inBody: body) }
+            return Future.map(on: conn) { try NetworkUtil.jsonResponse(inBody: body) }
         }
         guard !user.passwordHash.isEmpty else {
             let body = ["message":"Missing user password!","code":"1001"]
-            return Future.map(on: conn) { try jsonResponse(inBody: body) }
+            return Future.map(on: conn) { try NetworkUtil.jsonResponse(inBody: body) }
         }
         user.passwordHash = try BCryptDigest().hash(user.passwordHash)
         return user.save(on: conn).map() { user in
@@ -128,7 +128,7 @@ final class UserController {
             else {
                 body = ["message":"Create user fail!","code":"1001"]
             }
-            return try jsonResponse(inBody: body)
+            return try NetworkUtil.jsonResponse(inBody: body)
         }
     }
     
@@ -145,7 +145,7 @@ final class UserController {
         var verifyCode = emailDic[email]
         
         if verifyCode == nil{
-            verifyCode = randomNumericString(length: 4)
+            verifyCode = NumbericUtil.randomNumbericString(length: 4)
         }
         let userMail = Mail.User(email: email)
         
@@ -167,11 +167,11 @@ final class UserController {
         }
         return result.futureResult.map(to: HTTPResponse.self) { isSucceed in
             if isSucceed {
-                return try jsonResponse(inBody: ["message":"Send successfully!","code":"1000"])
+                return try NetworkUtil.jsonResponse(inBody: ["message":"Send successfully!","code":"1000"])
             }
             else{
                 self.emailDic[email] = verifyCode!
-                return try jsonResponse(inBody: ["message":"Send fail!","code":"1001"])
+                return try NetworkUtil.jsonResponse(inBody: ["message":"Send fail!","code":"1001"])
             }
         }
     }

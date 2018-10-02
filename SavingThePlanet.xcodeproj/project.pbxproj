@@ -31,8 +31,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		8C41C44D215BD0CC00F0E77D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C41C44C215BD0CC00F0E77D /* Network.swift */; };
-		8C41C44F215BDB8700F0E77D /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C41C44E215BDB8700F0E77D /* Numeric.swift */; };
+		8C41C44D215BD0CC00F0E77D /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C41C44C215BD0CC00F0E77D /* NetworkUtil.swift */; };
+		8C41C44F215BDB8700F0E77D /* NumbericUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C41C44E215BDB8700F0E77D /* NumbericUtil.swift */; };
 		8CC943E221495B1500E85EE4 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 8CC943E121495B1500E85EE4 /* Resources */; };
 		8CC943E42149617D00E85EE4 /* WebsiteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC943E32149617D00E85EE4 /* WebsiteController.swift */; };
 		OBJ_1096 /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* TodoController.swift */; };
@@ -6213,8 +6213,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8C41C44C215BD0CC00F0E77D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		8C41C44E215BDB8700F0E77D /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
+		8C41C44C215BD0CC00F0E77D /* NetworkUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
+		8C41C44E215BDB8700F0E77D /* NumbericUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbericUtil.swift; sourceTree = "<group>"; };
 		8CC943E121495B1500E85EE4 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		8CC943E32149617D00E85EE4 /* WebsiteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteController.swift; sourceTree = "<group>"; };
 		"Auth::Authentication::Product" /* Authentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -8137,8 +8137,8 @@
 		8C41C44B215BD0B600F0E77D /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				8C41C44C215BD0CC00F0E77D /* Network.swift */,
-				8C41C44E215BDB8700F0E77D /* Numeric.swift */,
+				8C41C44C215BD0CC00F0E77D /* NetworkUtil.swift */,
+				8C41C44E215BDB8700F0E77D /* NumbericUtil.swift */,
 			);
 			name = Util;
 			path = Sources/Util;
@@ -12861,9 +12861,9 @@
 				OBJ_1098 /* Plan.swift in Sources */,
 				OBJ_1099 /* Todo.swift in Sources */,
 				OBJ_1100 /* User.swift in Sources */,
-				8C41C44D215BD0CC00F0E77D /* Network.swift in Sources */,
+				8C41C44D215BD0CC00F0E77D /* NetworkUtil.swift in Sources */,
 				OBJ_1101 /* app.swift in Sources */,
-				8C41C44F215BDB8700F0E77D /* Numeric.swift in Sources */,
+				8C41C44F215BDB8700F0E77D /* NumbericUtil.swift in Sources */,
 				OBJ_1102 /* boot.swift in Sources */,
 				OBJ_1103 /* configure.swift in Sources */,
 				OBJ_1104 /* routes.swift in Sources */,
