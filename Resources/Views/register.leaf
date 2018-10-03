@@ -29,7 +29,7 @@
                     <br>
                     <div class="form-group">
                         <div class="form-inline">
-                            <button type="button" class="btn btn-warning col-xs-4" value="sendCaptcha" onclick="sendCaptcha();">发送验证码</button>
+                            <button type="button" class="btn btn-warning col-xs-4" value="sendCaptcha" onclick="sendCaptcha();" style="white-space: normal;">发送验证码</button>
                             <div class="col-xs-2"></div>
                             <button type="button" class="btn btn-success col-xs-6" value="register" onclick="register();">注册</button>
                         </div>
