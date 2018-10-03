@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if abc//#if os(OSX)
 import FluentPostgreSQL
+#endif
 import Vapor
 import Crypto
 import Leaf
@@ -92,7 +94,12 @@ final class UserController {
             
             return try req.content.decode(User.self).flatMap { user in
                 decodeUser = user
-                return User.query(on: req).filter(\.email == decodeUser!.email).first().flatMap(handler)
+                #if abc//#if os(OSX)
+                    return User.query(on: req).filter(\.email == decodeUser!.email).first().flatMap(handler)
+                #else
+                    return try handler(decodeUser)
+                #endif
+            
             }
         }
         else {
@@ -102,7 +109,16 @@ final class UserController {
             inputCaptcha = captcha
             
             decodeUser = try req.query.decode(User.self)
-            return User.query(on: req).filter(\.email == decodeUser!.email).first().flatMap(handler)
+            if isUseThirdServer {
+                return try handler(decodeUser)
+            }
+            else {
+                #if abc//#if os(OSX)
+                return User.query(on: req).filter(\.email == decodeUser!.email).first().flatMap(handler)
+                #else
+                    return try handler(decodeUser)
+                #endif
+            }
         }
     }
     
@@ -117,6 +133,14 @@ final class UserController {
             return Future.map(on: conn) { try NetworkUtil.jsonResponse(inBody: body) }
         }
         user.passwordHash = try BCryptDigest().hash(user.passwordHash)
+        if isUseThirdServer {
+            try conn.authenticate(user)
+            return Future.map(on: conn) {
+                try NetworkUtil.jsonResponse(inBody: ["message":"Create user successfully!",
+                                                      "code":"1000"])
+            }
+        }
+        
         return user.save(on: conn).map() { user in
             var body:[String:String]
             if let id = user.id {

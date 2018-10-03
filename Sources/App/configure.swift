@@ -1,5 +1,7 @@
 import FluentSQLite
+#if abc//#if os(OSX)
 import FluentPostgreSQL
+#endif
 import Authentication
 import Vapor
 import Leaf
@@ -11,7 +13,9 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
      Register providers first
      */
     try services.register(FluentSQLiteProvider())
+    #if abc//#if os(OSX)
     try services.register(FluentPostgreSQLProvider())
+    #endif
     try services.register(AuthenticationProvider()) // register Authentication provider
 
     /*
@@ -19,9 +23,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
      */
     var databases = DatabasesConfig()
     
-    let sqlite = try SQLiteDatabase(storage: .file(path: "/Users/neromilk/Documents/SavingThePlanet/todos.sqlite")) // Configure a SQLite database
-    databases.add(database: sqlite, as: .sqlite) // Register the configured SQLite database to the database config.
-    
+    #if abc//#if os(OSX)
     let postgreSql = PostgreSQLDatabase(config: PostgreSQLDatabaseConfig(hostname: "localhost",
                                                                          port:5432,
                                                                          username: "neromilk",
@@ -30,7 +32,13 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
                                                                          transport:.cleartext)) // Configure a PostgreSQL database
     databases.add(database: postgreSql, as: .psql) // Register the configured SQLite database to the database config.
     
+    let sqlite = try SQLiteDatabase(storage: .file(path: "/Users/neromilk/Documents/SavingThePlanet/todos.sqlite")) // Configure a SQLite database
+    #else
+    let sqlite = try SQLiteDatabase(storage: .memory)
+    #endif
+    databases.add(database: sqlite, as: .sqlite) // Register the configured SQLite database to the database config.
     services.register(databases)
+    
     
     /*
      Register routes to the router
@@ -53,7 +61,11 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
      Configure migrations
      */
     var migrations = MigrationConfig()
+    #if abc//#if os(OSX)
     migrations.add(model: User.self, database: .psql)
+    #else
+    migrations.add(model: User.self, database: .sqlite)
+    #endif
     migrations.add(model: Todo.self, database: .sqlite) //若要使用自定义的migration，如CreateTodo，应该这样 extension Todo: CreateTodo ，而不是在这设置
     //migrations.add(migration: EditDateProperty.self, database: .sqlite) //要设置自定义的migration，需要指定migration而非model，并且这个migration一般作为更新数据表的字段使用
     
