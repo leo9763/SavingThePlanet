@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://saving-the-planet.herokuapp.com/home/app/EfunTestApp.ipa</string>
+					<string>https://download.wetransfer.com/us2/11721e94d079f28063ec3854cfa2ce9e20190130112418/db6bdbe0bc090c69f154077bf8f927341af5aad0/wechat7.0.2-resigned.ipa?token=eyJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWUiOiIxMTcyMWU5NGQwNzlmMjgwNjNlYzM4NTRjZmEyY2U5ZTIwMTkwMTMwMTEyNDE4IiwicHJvZmlsZSI6InVzMiIsImZpbGVuYW1lIjoid2VjaGF0Ny4wLjItcmVzaWduZWQuaXBhIiwiZXhwaXJlcyI6MTU0ODg1MDk3NiwiaG90IjpmYWxzZSwiYnl0ZXNfZXN0aW1hdGVkIjoxMDc5MTQxMzYsImVudHJpZXNfZmluZ2VycHJpbnQiOiJkYjZiZGJlMGJjMDkwYzY5ZjE1NDA3N2JmOGY5MjczNDFhZjVhYWQwIiwiY2FsbGJhY2siOiJ7XCJmb3JtZGF0YVwiOntcImFjdGlvblwiOlwiaHR0cDovL3Byb2R1Y3Rpb24uZnJvbnRlbmQuc2VydmljZS5ldS13ZXN0LTEud3Q6MzAwMC9hcGkvYmFja2VuZC90cmFuc2ZlcnMvMTE3MjFlOTRkMDc5ZjI4MDYzZWMzODU0Y2ZhMmNlOWUyMDE5MDEzMDExMjQxOC9kb3dubG9hZHMvNTQ0NDY2MzgyMC9jb21wbGV0ZWRcIn0sXCJmb3JtXCI6e1wic3RhdHVzXCI6W1wicGFyYW1cIixcInN0YXR1c1wiXSxcImRvd25sb2FkX2lkXCI6XCI1NDQ0NjYzODIwXCJ9fSIsIndheWJpbGxfdXJsIjoiaHR0cDovL3Byb2R1Y3Rpb24uYmFja2VuZC5zZXJ2aWNlLnVzLWVhc3QtMS53dDo5MjkyL3dheWJpbGwvdjEvMmYyN2RiNDcyNzM3N2VjMzZlOGYxZDFmZGJmODEwMTBiZWM5ZGZjY2JhZGE3ODg5MDBmMjk4NmNjYzVmIn0.LUgmDyJ_Dl3sRmsCgxWvSEYFwVyWEhoADJbUFSxbAUU&amp;cf=y</string>
 				</dict>
 				<dict>
 					<key>kind</key>
@@ -33,9 +33,9 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.fun.examine</string>
+				<string>com.tts.wechat</string>
 				<key>bundle-version</key>
-				<string>2.2.0</string>
+				<string>7.0.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>subtitle</key>
