@@ -1,0 +1,41 @@
+#set("content") {
+
+<div style="display: flex; width: 100%;">
+
+  <img src="whitePollution/images/left_poster.jpeg" id="left-img">
+    
+  <div class="jumbotron" id="main-info" style="background-color:#242424; color: white; margin-right:50px; text-align:justify">
+      <h1 id="main-info-title">现全国一天至少丢弃<font color="#FF3300">#(plasticBoxCount)</font>个塑料餐具</h1>
+      <div id="title-horizontal-interval" style="height: 8%;"> </div>
+      <p id="main-info-detail">国内前3大外卖平台合计一天大概有#(orderCount)笔外卖订单。有环保组织研究分析100个外卖订单发现，平均每单外卖会消耗3.27个一次性塑料餐盒/杯，以此计算，这3家平台每天将产生近#(plasticBoxCount)个一次性餐具。这还不包括其他网络外卖平台和传统餐饮门店产生的一次性餐具！</p>
+  </div>
+  
+</div>
+}
+
+#embed("base")
+
+<script type="text/javascript">
+  $(function () {
+    $("body").eq(0).attr("style","background-color:#242424; margin-top:50px;");
+  });
+
+  window.onload=function(){                   
+    changeDivHeight();              
+  }              
+  window.onresize=function(){                   
+    changeDivHeight();              
+  }              
+
+  function changeDivHeight(){                               
+    var h = document.documentElement.clientHeight;
+    document.getElementById("left-img").style.width="50%"; 
+    document.getElementById("left-img").style.height="50%"; 
+    document.getElementById("main-info").style.width="50%";
+    document.getElementById("main-info").style.marginLeft="12%"; 
+    document.getElementById("main-info").style.marginTop="8%"; 
+    document.getElementById("title-horizontal-interval").style.height="8%;";
+  }
+
+  
+</script>

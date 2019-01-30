@@ -68,7 +68,6 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     #endif
     migrations.add(model: Todo.self, database: .sqlite) //若要使用自定义的migration，如CreateTodo，应该这样 extension Todo: CreateTodo ，而不是在这设置
     //migrations.add(migration: EditDateProperty.self, database: .sqlite) //要设置自定义的migration，需要指定migration而非model，并且这个migration一般作为更新数据表的字段使用
-    
     services.register(migrations)
     
     

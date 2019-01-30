@@ -11,7 +11,7 @@
     </head>
     <body style="background:url(register/images/earth_long.png) no-repeat; height: 740px; background-size:cover;">
         <div class="container">
-            <div class="col-sm-offset-9 col-sm-3" style="margin-top: 100px">
+            <div class="col-sm-offset-10 col-sm-3" style="margin-top: 100px; padding-left: 0px; padding-right: 50px;">
                 <form class="form form-horizontal" method="POST" action="/api/register" style="color: #ffffff" role="registerForm" name="registerForm" id="registerForm">
                     <h3 class="text-center">用户注册</h3>
                     <div class="form-group">
@@ -29,9 +29,9 @@
                     <br>
                     <div class="form-group">
                         <div class="form-inline">
-                            <button type="button" class="btn btn-warning col-xs-4" value="sendCaptcha" onclick="sendCaptcha();" style="white-space: normal;">发送验证码</button>
+                            <button type="button" class="btn btn-warning col-xs-4" value="sendCaptcha" onclick="sendCaptcha();" style="white-space: normal; font-size: 12px;">发送验证码</button>
                             <div class="col-xs-2"></div>
-                            <button type="button" class="btn btn-success col-xs-6" value="register" onclick="register();">注册</button>
+                            <button type="button" class="btn btn-success col-xs-6" value="register" onclick="register();" style="white-space: normal; font-size: 12px;">注册</button>
                         </div>
                     </div>
                 </form>

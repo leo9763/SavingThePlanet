@@ -2,7 +2,18 @@
 <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        <img src="whitePllution/images/left_poster.jpeg" class="img-responsive">
+        <button data-toggle="collapse" data-target="#newsCollapsible" class="btn btn-warning">环保新闻</button>
+        <div id="newsCollapsible" class="collapse in">Bootstrap Collapsibel</div>
+        </br>
+        <button data-toggle="collapse" data-target="#knowledgeCollapsible" class="btn btn-warning">环保知识</button>
+        <div id="knowledgeCollapsible" class="collapse in">
+          <ol>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ol>
+        </div>
       </div>
       <div class="col-sm-4">
       </div>

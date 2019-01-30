@@ -15,7 +15,7 @@ struct WebsiteController: RouteCollection {
         router.get("home",use: homeHandler)
         router.get("register",use: rigisterHandler)
         router.get("airPollution",use: airPollutionHandler)
-        router.get("whitePllution",use: whitePollutionHandler)
+        router.get("whitePollution",use: whitePollutionHandler)
         router.get("environmentScience",use: environmentScienceHandler)
     }
     
@@ -23,7 +23,7 @@ struct WebsiteController: RouteCollection {
         
 
         let homeMoudleContexts = [homeModuleContext(imagePath: "home/images/air-pollution.jpg", route: "/airPollution", title: "空气污染"),
-                                  homeModuleContext(imagePath: "home/images/white_pollution.jpeg", route: "/whitePllution", title: "白色污染"),
+                                  homeModuleContext(imagePath: "home/images/white_pollution.jpeg", route: "/whitePollution", title: "白色污染"),
                                   homeModuleContext(imagePath: "home/images/env_protection.jpg", route: "/environmentScience", title: "环保科普")]
         
         let context = homeContext(homeModules:homeMoudleContexts,
@@ -38,17 +38,19 @@ struct WebsiteController: RouteCollection {
     
     func whitePollutionHandler(_ req: Request) throws -> Future<View> {
 
-        let context = whitePllutionContext(userEmail:_authenticate(req)?.email)
-        return try req.view().render("whitePllution",context)
+        let context = whitePollutionContext(userEmail:_authenticate(req)?.email,
+                                            plasticBoxCount:"1亿",
+                                            orderCount:"3000万+")
+        return try req.view().render("whitePollution",context)
     }
     
     func airPollutionHandler(_ req: Request) throws -> Future<View> {
-        let context = whitePllutionContext(userEmail:_authenticate(req)?.email)
+        let context = airPollutionContext(userEmail:_authenticate(req)?.email)
         return try req.view().render("airPollution",context)
     }
     
     func environmentScienceHandler (_ req: Request) throws -> Future<View> {
-        let context = whitePllutionContext(userEmail:_authenticate(req)?.email)
+        let context = environmentScienceContext(userEmail:_authenticate(req)?.email)
         return try req.view().render("environmentScience",context)
     }
     
@@ -75,8 +77,10 @@ struct homeModuleContext: Encodable {
     let route:String
     let title:String
 }
-struct whitePllutionContext: Encodable {
+struct whitePollutionContext: Encodable {
     let userEmail:String?
+    let plasticBoxCount:String
+    let orderCount:String
 }
 struct airPollutionContext: Encodable {
     let userEmail:String?

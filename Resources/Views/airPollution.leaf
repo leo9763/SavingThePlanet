@@ -1,19 +1,206 @@
 #set("content") {
+
+<div id="affixed" data-spy="affix" style="right: 0;bottom: 0;color: red;">实时空气质量：<br>您当前所在城市的空气质量指标为：</div>
+
+<div class="jumbotron text-center">
+  <h2>空气污染会造成酸雨、可吸入颗粒的增加、温室效应。</h2>
+  <br>
+  <div class="container">
+    <p style="font-size: 14px; text-align: center;">这些现象会导致有毒化合物被吸收进植物组织、城市肺癌死亡率翻数倍、支气管炎、肺气肿、神经麻痹、神经衰弱、儿童呼吸道发病率增加、臭氧层空洞扩大、南极冰川加剧融化等等等。现在可能还没感到不适或危险，但当人感到时，无论是个人的毒剂摄入量还是全球的气候就都已经到达红色危急、影响性命的地步了。</p>  
+  </div>
+</div>
+
 <div class="container">
-    <div class="row">
-      <div class="col-sm-8">
-        <img src="whitePllution/images/left_poster.jpeg" class="img-responsive">
+  <div class="sampleInterval"></div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4"><img src="airPollution/images/haze_view.jpg" id="img-haze-view" class="img-sample"></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <div class="jumbotron" id="content-haze-view" style="background-color:#FFFFFF;width: 100%;">小桥流水，本该构成一幅优雅美景，但由于每况日下的空气质量，我们的心情就像当下的景色被笼罩了霾一样，是灰暗的。</div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="sampleInterval"></div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <div class="jumbotron" id="content-car-gas" style="background-color:#FFFFFF;">中国国已连续九年成为世界机动车产销第一大国，机动车污染已成为我国空气污染的重要来源，是造成环境空气污染的重要原因。</div>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3"><img src="airPollution/images/car_gas2.jpg" id="img-car-gas"  class="img-sample"></div>
+    <div class="col-sm-2"></div>
+  </div>
+  <div class="sampleInterval"></div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3"><img src="airPollution/images/factory_gas2.jpeg" id="img-factory-gas" class="img-sample"></div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <div class="jumbotron" id="content-factory-gas" style="background-color:#FFFFFF;">到2020年，全国仅火电厂排放的二氧化硫就将达2100万吨以上，全部排放量将超过大气环境容量1倍以上。</div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>
+
+<div class="sampleInterval"></div>
+
+<h3>&nbsp&nbsp污染科普</h3><br>
+<div class="container table-responsive">
+  <table class="table table-striped text-nowrap">
+    <thead>
+      <tr>
+        <th>知识点分类</th>
+        <th>相关信息集</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>颗粒物</td>
+        <td>* 对人体健康的影响，取决于颗粒物的浓度和在其中暴露的时间。暴露在合并有其他污染物（SO2）的颗粒物中所造成的健康危害，要比分别暴露在单一污染物中严重得多。
+        <br>* 粒径越小，越不易沉积，长时间飘浮在大气中容易被吸入体内，且容易深入肺部。
+        <br>* 粒径越小，颗粒的表面积越大，物理、化学活性越高，加剧了生理效应的发生与发展。颗粒的表面可以吸附空气中的各种有害气体及其他污染物，而成为它们的载体，如可以承载强致癌物质苯并[a]芘及细菌等。</td>
+      </tr>
+      <tr>
+        <td>PM2.5</td>
+        <td>* PM2.5粒径小，面积大，活性强，易附带有毒、有害物质（例如，重金属、微生物等），且在大气中的停留时间长、输送距离远。<br>
+        * 固定源包括各种燃料燃烧源，如发电、冶金、石油、化学、纺织印染等各种工业过程、供热、烹调过程中燃煤与燃气或燃油排放的烟尘。流动源主要是各类交通工具在运行过程中使用燃料时向大气中排放的尾气。<br>
+        * 全球每年约210万人死于PM2.5等颗粒物浓度上升。
+        </td>
+      </tr>
+      <tr>
+        <td>污染来源</td>
+        <td>* 工业生产排放到大气中的污染物有烟尘、硫的氧化物、氮的氧化物、有机化合物、卤化物、碳化合物等。其中有的是烟尘，有的是气体。<br>
+        * 汽车、火车、飞机、轮船是当代的主要运输工具，它们烧煤或石油产生的废气也是重要的污染物。汽车排放的废气主要有一氧化碳、二氧化硫、氮氧化物和碳氢化合物等，前三种物质危害性很大。<br>
+        * 生活炉灶与采暖锅炉。<br>
+        * 森林火灾产生的烟雾。<br>
+        * 产业升级之后，其能耗大户已经不再是工业，而是建筑物和机动车。尤其是城市建筑，其能耗已经占到了城市总能耗的约2/3。
+        </td>
+      </tr>
+      <tr>
+        <td>影响途径</td>
+        <td>表面接触、食入含污染物的食物和水、吸入被污染的空气，其中以第三条途径最为重要。</td>
+      </tr>
+      <tr>
+        <td>污染现况</td>
+        <td>当前中国大气污染状况十分严重。主要表现为煤烟型污染。城市大气环境中总悬浮颗粒物浓度普遍超标，二氧化硫污染一直在较高水平机动车尾气污染物排放总量迅速增加氮氧化物污染呈加重趋势。</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="sampleInterval"></div>
+
+<div class="container" style="background-color: #242424;">
+  <div id="logoCarousel" class="carousel col-lg-8 col-lg-offset-2" data-ride="carousel">
+    <ol class="carousel-indicators black">
+      <li data-target="#logoCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#logoCarousel" data-slide-to="1"></li>
+      <li data-target="#logoCarousel" data-slide-to="2"></li>
+      <li data-target="#logoCarousel" data-slide-to="3"></li>
+    </ol>
+  
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="airPollution/images/worker.jpeg" style="width: 100%">
+        <div class="carousel-caption">
+          <!-- <h3>Caption 1</h3> -->
+        </div>
       </div>
-      <div class="col-sm-4">
+      <div class="item">
+        <img src="airPollution/images/sky.jpeg" style="width: 100%">
+        <div class="carousel-caption">
+          <!-- <h3>Caption 2</h3> -->
+        </div>
       </div>
+      <div class="item">
+        <img src="airPollution/images/china.jpeg" style="width: 100%">
+        <div class="carousel-caption">
+          <!-- <h3>Caption 2</h3> -->
+        </div>
+      </div>
+      <div class="item">
+        <img src="airPollution/images/sicker.jpeg" style="width: 100%">
+        <div class="carousel-caption">
+          <!-- <h3>Caption 2</h3> -->
+        </div>
+      </div>
+      <a class="left carousel-control" href="#logoCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#logoCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
     </div>
   </div>
+</div>
+
+<div class="sampleInterval"></div>
+
+<h3>&nbsp&nbsp防治科普</h3><br>
+<div class="container table-responsive">
+  <table class="table table-striped text-nowrap">
+    <tbody>
+      <tr><td>不乱扔废弃物；</td></tr>
+      <tr><td>出行尽量乘坐公交车、地铁，减少私家车使用；</td></tr>
+      <tr><td>多参加植树等绿化活动；</td></tr>
+      <tr><td>私家车安装尾气处理装置，使用润滑油使燃油充分燃烧，减少有害气体排放；</td></tr>
+      <tr><td>实行由煤向燃气、电，最好能向其它新型的能源转换；</td></tr>
+      <tr><td>对燃料进行预处理（如烧煤前先进行脱硫），改进燃烧技术等均可减少排污量；</td></tr>
+      <tr><td>企业在污染物未进入大气之前，使用除尘消烟技术、冷凝技术、液体吸收技术、回收处理技术等消除废气中的部分污染物，减少进入大气的污染物数量；</td></tr>
+      <tr><td>政府利用法律和经济双重手段整治；</td></tr>
+      <tr><td>加强宣传教育，引导全社会参与；</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="sampleInterval"></div>
+
 }
 
 #embed("base")
 
+<style type="text/css">
+  .img-sample {
+    height: auto;
+    border-radius: 15px;
+  }
+  .content-sample {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+</style>
+
 <script type="text/javascript">
-  $(function () {
-    $("body").eq(0).attr("style","background-color:#242424; margin-top:50px;");
-  });
+  window.onload=function(){                   
+    changeDivHeight();  
+    
+  } 
+               
+  window.onresize=function(){                   
+    changeDivHeight();              
+    fetchAqiAndPm25();
+  }  
+
+  function changeDivHeight() {
+    var sampleIntervalHeight = "80px";
+    if (document.body.clientWidth < 768) {
+      sampleIntervalHeight="40px";
+    }
+    else if (document.body.clientWidth < 992) {
+      sampleIntervalHeight="60px";
+    }
+    var sampleIntervalList = document.getElementsByClassName("sampleInterval")
+    for (var i = sampleIntervalList.length - 1; i >= 0; i--) {
+      sampleIntervalList[i].style.height=sampleIntervalHeight;
+    }
+    document.getElementById("img-haze-view").style.width = "400px";
+    document.getElementById("img-car-gas").style.width = "300px";
+    document.getElementById("img-factory-gas").style.width = "350px";
+  }
+
+  function fetchAqiAndPm25() {
+    $("#affixed").val("haha");
+  }
 </script>
